@@ -21,7 +21,7 @@
 
 This repository serves as a starting point for creating adapters for the [B2BStore project](https://github.com/orienteed/b2bstore). The adapters abstract the connection layer of the storefront and allow for connecting to different backends.
 
-This boilerplate includes a strong base architecture, and the necessary code to develop the library with [B2BStore project](https://github.com/orienteed/b2bstore) and publish to npmjs.com, while following best practices for the technologies used.
+This boilerplate includes a strong base architecture, and the necessary code to develop the library with the [B2BStore project](https://github.com/orienteed/b2bstore) and publish to _npmjs.com_, while following best practices for the technologies used.
 
 </br>
 
@@ -37,15 +37,15 @@ The boilerplate includes the expected interfaces that the adapter should impleme
 
 ### &emsp;**Configuration of ESlint, Prettier and Husky**
 
-The boilerplate comes with a pre-configured setup for linting and formatting your code using [ESlint](https://eslint.org/), [Prettier](https://prettier.io/) and [Husky](https://typicode.github.io/husky/#/). This helps to ensure that your code follows best practices and is easy to read and maintain.
+The boilerplate has a pre-configured setup for linting and formatting your code using [ESlint](https://eslint.org/), [Prettier](https://prettier.io/) and [Husky](https://typicode.github.io/husky/#/). This helps to ensure that your code follows best practices and is easy to read and maintain.
 
-### &emsp;**Upload the library to npmjs.com**
+### &emsp;**Usage of the library in the [B2BStore project](https://github.com/orienteed/b2bstore)**
 
-The _"main"_ branch of the repository includes the code necessary to upload the adapter library to npmjs.com (`package.json` and `vite.config.js`). This allows you to easily share and distribute your adapter with other developers.
+The _"develop"_ branch of the repository includes the code needed to develop and test the adapter in the [B2BStore project](https://github.com/orienteed/b2bstore). This includes the necessary commands and configuration to run the adapter in the storefront.
 
-### &emsp;**Usage the library in [B2BStore project](https://github.com/orienteed/b2bstore)**
+### &emsp;**Upload the library to _npmjs.com_**
 
-The _"develop"_ branch of the repository includes the code needed to develop and test the adapter in the [B2BStore project](https://github.com/orienteed/b2bstore). This includes the necessary commands and confifuration to run the adapter in the storefront.
+The _"main"_ branch of the repository includes the code necessary to upload the adapter library to _npmjs.com_ (`package.json` and `vite.config.js`). This allows you to share and distribute your adapter with other developers easily.
 
 </br>
 
@@ -61,7 +61,8 @@ To add the _b2bstore-boilerplate-adapter_ repository to B2BStore, use git submod
 git submodule add <adapter_repository> app/packages/adapters/<adapter_name>
 ```
 
-&emsp;**Install subomodules**
+&emsp;**Install submodules**
+
 Once the submodule is added to your project, you will need to download it by running the following command in your project's root directory. This command will download the latest version of the submodules and make it available for use in your project.
 
 ```bash
@@ -92,9 +93,9 @@ import { getProducts } from "@b2bstore/boilerplate-adapter"
 
 ## 📖 Publish to _npmjs.com_
 
-Publish the adapter to _npmjs.com_ is a great way to make it easily available for others to use and contribute to. In this section, we will cover the steps to log in to your _npmjs.com_ account, initialize your package with a scope, and publish it to the npm registry.
+Publishing the adapter to _npmjs.com_ is a great way to make it readily available for others to use and contribute to. In this section, we will cover the steps to log in to your _npmjs.com_ account, initialize your package with a scope, and publish it to the npm registry.
 
-&emsp;**Update and got to _"main"_ branch**
+&emsp;**Go to the _"main"_ branch and update it**
 
 First, make sure that you are on the _"main"_ branch of your repository. If you are not, you can switch to it by running the following command:
 
@@ -132,7 +133,7 @@ npm publish
 
 It's important to note that as the [B2BStore project](https://github.com/orienteed/b2bstore) evolves, updates to the _b2bstore-boilerplate-adapter_ repository may be made to reflect changes in the expected interfaces and other aspects of the storefront. It's the responsibility of the developers who have forked the repository to keep their adapters up-to-date with these changes by regularly checking for updates and merging them into their own repository. To do this, you can use the following commands to update your repository with the latest changes from the _b2bstore-boilerplate-adapter_ repository:
 
-&emsp;**Add the remote repository, call it "upstream"**
+&emsp;**Add the remote repository, and call it "upstream"**
 
 ```bash
 git remote add upstream https://github.com/orienteed/b2bstore-boilerplate-adapter.git
@@ -155,7 +156,7 @@ git merge upstream/develop
 &emsp;**Apply the changes to the _"main"_ branch**
 
 ```bash
-git chechout main
+git checkout main
 git pull
 git merge develop
 ```
