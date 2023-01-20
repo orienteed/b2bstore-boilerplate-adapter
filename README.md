@@ -122,7 +122,7 @@ npm login
 Once your package is initialized and you are logged in to your _npmjs.com_ account, you can publish it to the npm registry using the next command. This will make your package available for others to install and use.
 
 ```bash
-npm publish --scope @b2bstore
+npm publish
 ```
 
 If you get an `E402` error, you can add the `--access public` flag to the command to publish your package.
