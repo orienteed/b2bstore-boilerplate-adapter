@@ -1,1 +1,1 @@
-export { default as getHelloWorld } from "./HelloWorld/getHelloWorld"
+export * from './HelloWorld';
