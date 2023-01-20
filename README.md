@@ -117,6 +117,14 @@ To log in to your _npmjs.com_ account, open a terminal and run the following com
 npm login
 ```
 
+&emsp;**Building your package**
+
+Before you can publish your package, you will need to build it. To do this, run the following command in your adapter's root directory:
+
+```bash
+yarn; yarn build
+```
+
 &emsp;**Publishing your package**
 
 Once your package is initialized and you are logged in to your _npmjs.com_ account, you can publish it to the npm registry using the next command. This will make your package available for others to install and use.
