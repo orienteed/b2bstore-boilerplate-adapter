@@ -58,7 +58,7 @@ The _b2bstore-boilerplate-adapter library_ provides a powerful and flexible adap
 To add the _b2bstore-boilerplate-adapter_ repository to B2BStore, use git submodules to add the library as a submodule in the app/packages/adapters folder. This can be done by running the following commands in your project's root directory:
 
 ```bash
-git submodule add <adapter_repository> app/packages/adapters/<adapter_name>
+git submodule add -b develop <adapter_repository> app/packages/adapters/<adapter_name>
 ```
 
 &emsp;**Install submodules**
@@ -70,6 +70,8 @@ git submodule update --init --recursive
 ```
 
 &emsp;**Using the library**
+
+**Warning!** If you have added the module as above, you should already be in the _"develop"_ branch, so you can skip to the next step.
 
 The _b2bstore-boilerplate-adapter_ repository is designed to be used with the _"develop"_ branch with B2BStore. To start working with the adapter, switch to the _"develop"_ branch by running the following command in your adapter's root directory:
 
