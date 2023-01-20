@@ -1,7 +1,7 @@
 {
   "name": "@b2bstore/boilerplate-adapter",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Orienteed SLU",
   "description": "Boilerplate adapter for B2BStore",
   "homepage": "https://b2bstore.io",
