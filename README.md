@@ -109,6 +109,8 @@ Later, you will need to update the _"main"_ branch with the latest changes from 
 git merge develop
 ```
 
+**Warning!** Pay attention to not overwrite the `package.json` file with the changes from the _"develop"_ branch. If you do, you won't be able to publish your package to _npmjs.com_.
+
 &emsp;**Logging in**
 
 To log in to your _npmjs.com_ account, open a terminal and run the following command. You will be prompted to enter your username, password, and email associated with your account. Once you have entered the correct information, you will be logged in and ready to publish your package.
