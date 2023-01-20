@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve('src', 'index.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'b2bstore-boilerplate-adapter',
       fileName: 'b2bstore-boilerplate-adapter',
     },
