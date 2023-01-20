@@ -80,13 +80,13 @@ git checkout develop
 Once you are on the _"develop"_ branch, you can start using the adapter by calling it with the `package.json` name indicated. For example, in your code, you can import the library using the following syntax:
 
 ```javascript
-import * as boilerplate from "@b2bstore/boilerplate-adapter"
+import * as boilerplate from "@b2bstore/boilerplate-adapter";
 ```
 
 You can also import specific modules or classes from the library like this:
 
 ```javascript
-import { getProducts } from "@b2bstore/boilerplate-adapter"
+import { getProducts } from "@b2bstore/boilerplate-adapter";
 ```
 
 </br>
@@ -122,7 +122,13 @@ npm login
 Once your package is initialized and you are logged in to your _npmjs.com_ account, you can publish it to the npm registry using the next command. This will make your package available for others to install and use.
 
 ```bash
-npm publish
+npm publish --scope @b2bstore
+```
+
+If you get an `E402` error, you can add the `--access public` flag to the command to publish your package.
+
+```bash
+npm publish --scope @b2bstore --access public
 ```
 
 > Please note that you can only publish a package with a certain name once, so choose a name that is unique and specific to your package. If you try to publish a package with a name that is already taken, you will receive an error message.

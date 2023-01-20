@@ -1,5 +1,5 @@
 {
-  "name": "@b2bstore/boilerplate-adapter",
+  "name": "boilerplate-adapter",
   "type": "module",
   "version": "0.0.0",
   "author": "Orienteed SLU",
@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/orienteed/b2bstore-boilerplate-adapter"
+    "url": "git+https://github.com/orienteed/b2bstore-boilerplate-adapter.git"
   },
   "bugs": {
     "url": "https://github.com/orienteed/b2bstore-boilerplate-adapter/issues"
