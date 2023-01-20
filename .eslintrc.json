@@ -9,5 +9,10 @@
   "rules": {
     "max-len": ["error", 140],
     "quotes": [2, "single", { "avoidEscape": true }]
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
   }
 }
