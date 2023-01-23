@@ -1,5 +1,8 @@
-const GetHelloWorld = () => {
-  return "Hello World!"
-}
+import { getHelloWorldState } from '..';
 
-export default GetHelloWorld
+const GetHelloWorld = () => {
+  const worldNumber = getHelloWorldState();
+  return 'Hello World ' + worldNumber + '!';
+};
+
+export default GetHelloWorld;
