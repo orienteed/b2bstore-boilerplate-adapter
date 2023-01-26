@@ -1,15 +1,6 @@
-import { useState } from 'react';
+// State
+export * from './context';
 
-// Global state
-const [worldNumber, setworldNumber] = useState<string | null>();
+// Endpoints
+export * from './schema';
 
-export const setHelloWorldState = (worldNumberReceived: string) => {
-  setworldNumber(worldNumberReceived);
-};
-
-export const getHelloWorldState = () => {
-  return worldNumber;
-};
-
-// Export all the functions in this file
-export * from './HelloWorld';
