@@ -14789,12 +14789,12 @@ export type GetShippingMethodsQuery = {
     } | null;
 };
 
-export type SetShippingAddressForEstimateMutationVariables = Exact<{
+export type SetShippingAddressMutationVariables = Exact<{
     cartId: Scalars['String'];
     address: CartAddressInput;
 }>;
 
-export type SetShippingAddressForEstimateMutation = {
+export type SetShippingAddressMutation = {
     __typename?: 'Mutation';
     setShippingAddressesOnCart?: {
         __typename?: 'SetShippingAddressesOnCartOutput';
@@ -24320,122 +24320,6 @@ export type CartPageFragmentFragment = {
     } | null>;
 };
 
-export type GetCategoryListQueryVariables = Exact<{
-    id: Scalars['String'];
-}>;
-
-export type GetCategoryListQuery = {
-    __typename?: 'Query';
-    categories?: {
-        __typename?: 'CategoryResult';
-        items?: Array<{
-            __typename?: 'CategoryTree';
-            uid: string;
-            children?: Array<{
-                __typename?: 'CategoryTree';
-                uid: string;
-                name?: string | null;
-                url_key?: string | null;
-                url_path?: string | null;
-                children_count?: string | null;
-                path?: string | null;
-                image?: string | null;
-                productImagePreview?: {
-                    __typename?: 'CategoryProducts';
-                    items?: Array<
-                        | {
-                              __typename?: 'BundleProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | {
-                              __typename?: 'ConfigurableProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | {
-                              __typename?: 'DownloadableProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | {
-                              __typename?: 'GiftCardProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | {
-                              __typename?: 'GroupedProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | {
-                              __typename?: 'SimpleProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | {
-                              __typename?: 'VirtualProduct';
-                              uid: string;
-                              small_image?: {
-                                  __typename?: 'ProductImage';
-                                  url?: string | null;
-                              } | null;
-                          }
-                        | null
-                    > | null;
-                } | null;
-            } | null> | null;
-        } | null> | null;
-    } | null;
-};
-
-export type GetNavigationMenuQueryVariables = Exact<{
-    id: Scalars['String'];
-}>;
-
-export type GetNavigationMenuQuery = {
-    __typename?: 'Query';
-    categories?: {
-        __typename?: 'CategoryResult';
-        items?: Array<{
-            __typename?: 'CategoryTree';
-            uid: string;
-            name?: string | null;
-            children_count?: string | null;
-            include_in_menu?: number | null;
-            url_path?: string | null;
-            children?: Array<{
-                __typename?: 'CategoryTree';
-                children_count?: string | null;
-                uid: string;
-                include_in_menu?: number | null;
-                name?: string | null;
-                position?: number | null;
-                url_path?: string | null;
-                url_suffix?: string | null;
-            } | null> | null;
-        } | null> | null;
-    } | null;
-};
-
 export type GetCustomerAddressesQueryVariables = Exact<{
     [key: string]: never;
 }>;
@@ -24584,32 +24468,6 @@ export type GetBillingAddressQuery = {
                 label?: string | null;
             } | null;
         } | null;
-    } | null;
-};
-
-export type GetSelectedShippingAddressQueryVariables = Exact<{
-    cartId: Scalars['String'];
-}>;
-
-export type GetSelectedShippingAddressQuery = {
-    __typename?: 'Query';
-    cart?: {
-        __typename?: 'Cart';
-        id: string;
-        shippingAddresses: Array<{
-            __typename?: 'ShippingCartAddress';
-            street: Array<string | null>;
-            city: string;
-            postcode?: string | null;
-            firstName: string;
-            lastName: string;
-            phoneNumber?: string | null;
-            country: { __typename?: 'CartAddressCountry'; code: string };
-            region?: {
-                __typename?: 'CartAddressRegion';
-                code?: string | null;
-            } | null;
-        } | null>;
     } | null;
 };
 
@@ -24886,11 +24744,11 @@ export type SetDefaultBillingAddressMutation = {
     } | null;
 };
 
-export type GetWebkulPaymentCreditsystemConfigQueryVariables = Exact<{
+export type GetWebkulPaymentCreditSystemConfigQueryVariables = Exact<{
     [key: string]: never;
 }>;
 
-export type GetWebkulPaymentCreditsystemConfigQuery = {
+export type GetWebkulPaymentCreditSystemConfigQuery = {
     __typename?: 'Query';
     WebkulPaymentCreditsystemConfig?: {
         __typename?: 'WebkulPaymentCreditsystemConfig';
@@ -24902,26 +24760,6 @@ export type GetWebkulPaymentCreditsystemConfigQuery = {
         remainingcredit?: string | null;
         remainingcreditcurrentcurrency?: string | null;
         remainingcreditformatted?: string | null;
-    } | null;
-};
-
-export type SetPaymentMethodOnCartForCreditSystemMutationVariables = Exact<{
-    cartId: Scalars['String'];
-}>;
-
-export type SetPaymentMethodOnCartForCreditSystemMutation = {
-    __typename?: 'Mutation';
-    setPaymentMethodOnCart?: {
-        __typename?: 'SetPaymentMethodOnCartOutput';
-        cart: {
-            __typename?: 'Cart';
-            id: string;
-            selected_payment_method?: {
-                __typename?: 'SelectedPaymentMethod';
-                code: string;
-                title: string;
-            } | null;
-        };
     } | null;
 };
 
@@ -27276,56 +27114,6 @@ export type GetSummaryDataForBraintreeQuery = {
     } | null;
 };
 
-export type GetPaymentNonceQueryVariables = Exact<{
-    cartId: Scalars['String'];
-}>;
-
-export type GetPaymentNonceQuery = {
-    __typename?: 'Query';
-    cart?: {
-        __typename?: 'Cart';
-        id: string;
-        paymentNonce?: string | null;
-    } | null;
-};
-
-export type SetSelectedPaymentMethodMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    paymentNonce: Scalars['String'];
-}>;
-
-export type SetSelectedPaymentMethodMutation = {
-    __typename?: 'Mutation';
-    setPaymentMethodOnCart?: {
-        __typename?: 'SetPaymentMethodOnCartOutput';
-        cart: {
-            __typename?: 'Cart';
-            id: string;
-            selected_payment_method?: {
-                __typename?: 'SelectedPaymentMethod';
-                code: string;
-                title: string;
-            } | null;
-        };
-    } | null;
-};
-
-export type GetSelectedPaymentMethodQueryVariables = Exact<{
-    cartId: Scalars['String'];
-}>;
-
-export type GetSelectedPaymentMethodQuery = {
-    __typename?: 'Query';
-    cart?: {
-        __typename?: 'Cart';
-        id: string;
-        selected_payment_method?: {
-            __typename?: 'SelectedPaymentMethod';
-            code: string;
-        } | null;
-    } | null;
-};
-
 export type AvailablePaymentMethodsFragmentFragment = {
     __typename?: 'Cart';
     id: string;
@@ -27371,23 +27159,16 @@ export type GetPaymentInformationQuery = {
     } | null;
 };
 
-export type SetPaymentMethodOnCartForFreeMutationVariables = Exact<{
+export type GetPaymentNonceQueryVariables = Exact<{
     cartId: Scalars['String'];
 }>;
 
-export type SetPaymentMethodOnCartForFreeMutation = {
-    __typename?: 'Mutation';
-    setPaymentMethodOnCart?: {
-        __typename?: 'SetPaymentMethodOnCartOutput';
-        cart: {
-            __typename?: 'Cart';
-            id: string;
-            selected_payment_method?: {
-                __typename?: 'SelectedPaymentMethod';
-                code: string;
-                title: string;
-            } | null;
-        };
+export type GetPaymentNonceQuery = {
+    __typename?: 'Query';
+    cart?: {
+        __typename?: 'Cart';
+        id: string;
+        paymentNonce?: string | null;
     } | null;
 };
 
@@ -27412,6 +27193,23 @@ export type GetPaymentMethodsQuery = {
     } | null;
 };
 
+export type GetSelectedPaymentMethodQueryVariables = Exact<{
+    cartId: Scalars['String'];
+}>;
+
+export type GetSelectedPaymentMethodQuery = {
+    __typename?: 'Query';
+    cart?: {
+        __typename?: 'Cart';
+        id: string;
+        selected_payment_method?: {
+            __typename?: 'SelectedPaymentMethod';
+            code: string;
+            title: string;
+        } | null;
+    } | null;
+};
+
 export type SetPaymentMethodOnCartMutationVariables = Exact<{
     cartId: Scalars['String'];
     payment_method: PaymentMethodInput;
@@ -27430,23 +27228,6 @@ export type SetPaymentMethodOnCartMutation = {
                 title: string;
             } | null;
         };
-    } | null;
-};
-
-export type GetSummaryDataQueryVariables = Exact<{
-    cartId: Scalars['String'];
-}>;
-
-export type GetSummaryDataQuery = {
-    __typename?: 'Query';
-    cart?: {
-        __typename?: 'Cart';
-        id: string;
-        selected_payment_method?: {
-            __typename?: 'SelectedPaymentMethod';
-            code: string;
-            title: string;
-        } | null;
     } | null;
 };
 
@@ -27671,6 +27452,16 @@ export type IsEmailAvailableQuery = {
     } | null;
 };
 
+export type GetDefaultShippingQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetDefaultShippingQuery = {
+    __typename?: 'Query';
+    customer?: {
+        __typename?: 'Customer';
+        default_shipping?: string | null;
+    } | null;
+};
+
 export type GetShippingInformationQueryVariables = Exact<{
     cartId: Scalars['String'];
 }>;
@@ -27704,22 +27495,12 @@ export type GetShippingInformationQuery = {
     } | null;
 };
 
-export type GetDefaultShippingQueryVariables = Exact<{ [key: string]: never }>;
-
-export type GetDefaultShippingQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        default_shipping?: string | null;
-    } | null;
-};
-
-export type SetCustomerAddressOnCartMutationVariables = Exact<{
+export type SetCustomerAddressIdOnCartMutationVariables = Exact<{
     cartId: Scalars['String'];
     addressId: Scalars['Int'];
 }>;
 
-export type SetCustomerAddressOnCartMutation = {
+export type SetCustomerAddressIdOnCartMutation = {
     __typename?: 'Mutation';
     setShippingAddressesOnCart?: {
         __typename?: 'SetShippingAddressesOnCartOutput';
@@ -27727,50 +27508,11 @@ export type SetCustomerAddressOnCartMutation = {
             __typename?: 'Cart';
             id: string;
             email?: string | null;
-            shipping_addresses: Array<{
-                __typename?: 'ShippingCartAddress';
-                city: string;
-                firstname: string;
-                lastname: string;
-                postcode?: string | null;
-                street: Array<string | null>;
-                telephone?: string | null;
-                country: {
-                    __typename?: 'CartAddressCountry';
-                    code: string;
-                    label: string;
-                };
-                region?: {
-                    __typename?: 'CartAddressRegion';
-                    code?: string | null;
-                    label?: string | null;
-                    region_id?: number | null;
-                } | null;
-                available_shipping_methods?: Array<{
-                    __typename?: 'AvailableShippingMethod';
-                    available: boolean;
-                    carrier_code: string;
-                    carrier_title: string;
-                    method_code?: string | null;
-                    method_title?: string | null;
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null> | null;
-                selected_shipping_method?: {
-                    __typename?: 'SelectedShippingMethod';
-                    carrier_code: string;
-                    method_code: string;
-                    method_title: string;
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null;
-            } | null>;
+            available_payment_methods?: Array<{
+                __typename?: 'AvailablePaymentMethod';
+                code: string;
+                title: string;
+            } | null> | null;
             items?: Array<
                 | {
                       __typename?: 'BundleCartItem';
@@ -27847,11 +27589,50 @@ export type SetCustomerAddressOnCartMutation = {
                     value?: number | null;
                 } | null;
             } | null;
-            available_payment_methods?: Array<{
-                __typename?: 'AvailablePaymentMethod';
-                code: string;
-                title: string;
-            } | null> | null;
+            shipping_addresses: Array<{
+                __typename?: 'ShippingCartAddress';
+                city: string;
+                firstname: string;
+                lastname: string;
+                postcode?: string | null;
+                street: Array<string | null>;
+                telephone?: string | null;
+                country: {
+                    __typename?: 'CartAddressCountry';
+                    code: string;
+                    label: string;
+                };
+                region?: {
+                    __typename?: 'CartAddressRegion';
+                    code?: string | null;
+                    label?: string | null;
+                    region_id?: number | null;
+                } | null;
+                selected_shipping_method?: {
+                    __typename?: 'SelectedShippingMethod';
+                    carrier_code: string;
+                    method_code: string;
+                    method_title: string;
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null;
+                available_shipping_methods?: Array<{
+                    __typename?: 'AvailableShippingMethod';
+                    available: boolean;
+                    carrier_code: string;
+                    carrier_title: string;
+                    method_code?: string | null;
+                    method_title?: string | null;
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null> | null;
+            } | null>;
             applied_gift_cards?: Array<{
                 __typename?: 'AppliedGiftCard';
                 code?: string | null;
@@ -27974,6 +27755,19 @@ export type SetShippingMethodMutation = {
                 lastname: string;
                 postcode?: string | null;
                 telephone?: string | null;
+                available_shipping_methods?: Array<{
+                    __typename?: 'AvailableShippingMethod';
+                    available: boolean;
+                    carrier_code: string;
+                    carrier_title: string;
+                    method_code?: string | null;
+                    method_title?: string | null;
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null> | null;
                 selected_shipping_method?: {
                     __typename?: 'SelectedShippingMethod';
                     carrier_code: string;
@@ -27996,19 +27790,6 @@ export type SetShippingMethodMutation = {
                     label?: string | null;
                     region_id?: number | null;
                 } | null;
-                available_shipping_methods?: Array<{
-                    __typename?: 'AvailableShippingMethod';
-                    available: boolean;
-                    carrier_code: string;
-                    carrier_title: string;
-                    method_code?: string | null;
-                    method_title?: string | null;
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null> | null;
             } | null>;
             items?: Array<
                 | {
@@ -29521,6 +29302,24 @@ export type CheckoutPageFragmentFragment = {
     } | null> | null;
 };
 
+export type GetCmsBlocksQueryVariables = Exact<{
+    identifiers:
+        | Array<InputMaybe<Scalars['String']>>
+        | InputMaybe<Scalars['String']>;
+}>;
+
+export type GetCmsBlocksQuery = {
+    __typename?: 'Query';
+    cmsBlocks?: {
+        __typename?: 'CmsBlocks';
+        items?: Array<{
+            __typename?: 'CmsBlock';
+            content?: string | null;
+            identifier?: string | null;
+        } | null> | null;
+    } | null;
+};
+
 export type GetCmsPageQueryVariables = Exact<{
     identifier: Scalars['String'];
 }>;
@@ -29562,6 +29361,55 @@ export type GetCmsDynamicBlocksQuery = {
             content: { __typename?: 'ComplexTextValue'; html: string };
         } | null>;
     };
+};
+
+export type GetProductDetailForCmsDynamicBlockQueryVariables = Exact<{
+    urlKey: Scalars['String'];
+}>;
+
+export type GetProductDetailForCmsDynamicBlockQuery = {
+    __typename?: 'Query';
+    products?: {
+        __typename?: 'Products';
+        items?: Array<
+            | {
+                  __typename?: 'BundleProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename?: 'ConfigurableProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename?: 'DownloadableProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename?: 'GiftCardProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename?: 'GroupedProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename?: 'SimpleProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename?: 'VirtualProduct';
+                  uid: string;
+                  url_key?: string | null;
+              }
+            | null
+        > | null;
+    } | null;
 };
 
 export type GetSalesRulesDataQueryVariables = Exact<{
@@ -29833,55 +29681,6 @@ export type GetSalesRulesDataQuery = {
                 method_code: string;
             } | null;
         } | null>;
-    } | null;
-};
-
-export type GetProductDetailForCmsDynamicBlockQueryVariables = Exact<{
-    urlKey: Scalars['String'];
-}>;
-
-export type GetProductDetailForCmsDynamicBlockQuery = {
-    __typename?: 'Query';
-    products?: {
-        __typename?: 'Products';
-        items?: Array<
-            | {
-                  __typename?: 'BundleProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | {
-                  __typename?: 'ConfigurableProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | {
-                  __typename?: 'DownloadableProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | {
-                  __typename?: 'GiftCardProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | {
-                  __typename?: 'GroupedProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | {
-                  __typename?: 'SimpleProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | {
-                  __typename?: 'VirtualProduct';
-                  uid: string;
-                  url_key?: string | null;
-              }
-            | null
-        > | null;
     } | null;
 };
 
@@ -30835,24 +30634,6 @@ export type SubmitContactFormMutation = {
     contactUs?: { __typename?: 'ContactUsOutput'; status: boolean } | null;
 };
 
-export type GetContactPageCmsBlocksQueryVariables = Exact<{
-    cmsBlockIdentifiers?: InputMaybe<
-        Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>
-    >;
-}>;
-
-export type GetContactPageCmsBlocksQuery = {
-    __typename?: 'Query';
-    cmsBlocks?: {
-        __typename?: 'CmsBlocks';
-        items?: Array<{
-            __typename?: 'CmsBlock';
-            content?: string | null;
-            identifier?: string | null;
-        } | null> | null;
-    } | null;
-};
-
 export type CreateAccountMutationVariables = Exact<{
     email: Scalars['String'];
     firstname: Scalars['String'];
@@ -31000,22 +30781,6 @@ export type GetImageBySkuQuery = {
               }
             | null
         > | null;
-    } | null;
-};
-
-export type GetFilterInputsForModalQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetFilterInputsForModalQuery = {
-    __typename?: 'Query';
-    __type?: {
-        __typename?: '__Type';
-        inputFields?: Array<{
-            __typename?: '__InputValue';
-            name: string;
-            type: { __typename?: '__Type'; name?: string | null };
-        }> | null;
     } | null;
 };
 
@@ -39656,7 +39421,7 @@ export type SubmitCurrentQuoteMutation = {
     mpQuoteSubmit?: number | null;
 };
 
-export type GetCategoriesQueryVariables = Exact<{
+export type GetCategoryQueryVariables = Exact<{
     id: Scalars['String'];
     pageSize: Scalars['Int'];
     currentPage: Scalars['Int'];
@@ -39664,7 +39429,7 @@ export type GetCategoriesQueryVariables = Exact<{
     sort?: InputMaybe<ProductAttributeSortInput>;
 }>;
 
-export type GetCategoriesQuery = {
+export type GetCategoryQuery = {
     __typename?: 'Query';
     categories?: {
         __typename?: 'CategoryResult';
@@ -40084,11 +39849,9 @@ export type GetCategoriesQuery = {
     } | null;
 };
 
-export type GetFilterInputsForCategoryQueryVariables = Exact<{
-    [key: string]: never;
-}>;
+export type GetFilterInputsQueryVariables = Exact<{ [key: string]: never }>;
 
-export type GetFilterInputsForCategoryQuery = {
+export type GetFilterInputsQuery = {
     __typename?: 'Query';
     __type?: {
         __typename?: '__Type';
@@ -40097,6 +39860,121 @@ export type GetFilterInputsForCategoryQuery = {
             name: string;
             type: { __typename?: '__Type'; name?: string | null };
         }> | null;
+    } | null;
+};
+
+export type GetCategoryAvailableSortMethodsQueryVariables = Exact<{
+    categoryIdFilter: FilterEqualTypeInput;
+}>;
+
+export type GetCategoryAvailableSortMethodsQuery = {
+    __typename?: 'Query';
+    products?: {
+        __typename?: 'Products';
+        sort_fields?: {
+            __typename?: 'SortFields';
+            options?: Array<{
+                __typename?: 'SortField';
+                label?: string | null;
+                value?: string | null;
+            } | null> | null;
+        } | null;
+    } | null;
+};
+
+export type GetCategoryDataQueryVariables = Exact<{
+    id: Scalars['String'];
+}>;
+
+export type GetCategoryDataQuery = {
+    __typename?: 'Query';
+    categories?: {
+        __typename?: 'CategoryResult';
+        items?: Array<{
+            __typename?: 'CategoryTree';
+            children_count?: string | null;
+            description?: string | null;
+            include_in_menu?: number | null;
+            name?: string | null;
+            uid: string;
+            url_key?: string | null;
+            url_path?: string | null;
+            children?: Array<{
+                __typename?: 'CategoryTree';
+                children_count?: string | null;
+                image?: string | null;
+                include_in_menu?: number | null;
+                name?: string | null;
+                path?: string | null;
+                position?: number | null;
+                uid: string;
+                url_key?: string | null;
+                url_path?: string | null;
+                url_suffix?: string | null;
+                productImagePreview?: {
+                    __typename?: 'CategoryProducts';
+                    items?: Array<
+                        | {
+                              __typename?: 'BundleProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | {
+                              __typename?: 'ConfigurableProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | {
+                              __typename?: 'DownloadableProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | {
+                              __typename?: 'GiftCardProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | {
+                              __typename?: 'GroupedProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | {
+                              __typename?: 'SimpleProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | {
+                              __typename?: 'VirtualProduct';
+                              uid: string;
+                              small_image?: {
+                                  __typename?: 'ProductImage';
+                                  url?: string | null;
+                              } | null;
+                          }
+                        | null
+                    > | null;
+                } | null;
+            } | null> | null;
+        } | null> | null;
     } | null;
 };
 
@@ -40120,44 +39998,6 @@ export type GetProductFiltersByCategoryQuery = {
                 value: string;
             } | null> | null;
         } | null> | null;
-    } | null;
-};
-
-export type GetCategoryDataQueryVariables = Exact<{
-    id: Scalars['String'];
-}>;
-
-export type GetCategoryDataQuery = {
-    __typename?: 'Query';
-    categories?: {
-        __typename?: 'CategoryResult';
-        items?: Array<{
-            __typename?: 'CategoryTree';
-            uid: string;
-            name?: string | null;
-            description?: string | null;
-            url_key?: string | null;
-            url_path?: string | null;
-        } | null> | null;
-    } | null;
-};
-
-export type GetCategoryAvailableSortMethodsQueryVariables = Exact<{
-    categoryIdFilter: FilterEqualTypeInput;
-}>;
-
-export type GetCategoryAvailableSortMethodsQuery = {
-    __typename?: 'Query';
-    products?: {
-        __typename?: 'Products';
-        sort_fields?: {
-            __typename?: 'SortFields';
-            options?: Array<{
-                __typename?: 'SortField';
-                label?: string | null;
-                value?: string | null;
-            } | null> | null;
-        } | null;
     } | null;
 };
 
@@ -43421,22 +43261,6 @@ export type ProductSearchQuery = {
             __typename?: 'SearchResultPageInfo';
             total_pages?: number | null;
         } | null;
-    } | null;
-};
-
-export type GetFilterInputsForSearchQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetFilterInputsForSearchQuery = {
-    __typename?: 'Query';
-    __type?: {
-        __typename?: '__Type';
-        inputFields?: Array<{
-            __typename?: '__InputValue';
-            name: string;
-            type: { __typename?: '__Type'; name?: string | null };
-        }> | null;
     } | null;
 };
 
