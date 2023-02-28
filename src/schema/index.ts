@@ -7791,11 +7791,356 @@ export enum __TypeKind {
     NonNull = 'NON_NULL'
 }
 
-export type GetWishlistItemsForLocalFieldQueryVariables = Exact<{
+export type GetProductsForPagebuilderByUrlKeyQueryVariables = Exact<{
+    url_keys?: InputMaybe<
+        Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>
+    >;
+    pageSize: Scalars['Int'];
+}>;
+
+export type GetProductsForPagebuilderByUrlKeyQuery = {
+    __typename?: 'Query';
+    products?: {
+        __typename?: 'Products';
+        total_count?: number | null;
+        items?: Array<
+            | {
+                  __typename: 'BundleProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | {
+                  __typename: 'ConfigurableProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | {
+                  __typename: 'DownloadableProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | {
+                  __typename: 'GiftCardProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | {
+                  __typename: 'GroupedProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | {
+                  __typename: 'SimpleProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | {
+                  __typename: 'VirtualProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_suffix?: string | null;
+                  sku?: string | null;
+                  stock_status?: ProductStockStatus | null;
+                  url_key?: string | null;
+                  price_range: {
+                      __typename?: 'PriceRange';
+                      maximum_price?: {
+                          __typename?: 'ProductPrice';
+                          regular_price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                      } | null;
+                  };
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+              }
+            | null
+        > | null;
+        filters?: Array<{
+            __typename?: 'LayerFilter';
+            name?: string | null;
+            filter_items_count?: number | null;
+            request_var?: string | null;
+            filter_items?: Array<
+                | {
+                      __typename?: 'LayerFilterItem';
+                      label?: string | null;
+                      value_string?: string | null;
+                  }
+                | {
+                      __typename?: 'SwatchLayerFilterItem';
+                      label?: string | null;
+                      value_string?: string | null;
+                  }
+                | null
+            > | null;
+        } | null> | null;
+    } | null;
+};
+
+export type GetWishlistProductsForLocalFieldQueryVariables = Exact<{
     currentPage: Scalars['Int'];
 }>;
 
-export type GetWishlistItemsForLocalFieldQuery = {
+export type GetWishlistProductsForLocalFieldQuery = {
     __typename?: 'Query';
     customer?: {
         __typename?: 'Customer';
@@ -8119,12 +8464,78 @@ export type GetReCaptchaV3ConfigQuery = {
     } | null;
 };
 
-export type GetProductDetailForAtcDialogQueryVariables = Exact<{
+export type ChangeCustomerPasswordMutationVariables = Exact<{
+    currentPassword: Scalars['String'];
+    newPassword: Scalars['String'];
+}>;
+
+export type ChangeCustomerPasswordMutation = {
+    __typename?: 'Mutation';
+    changeCustomerPassword?: {
+        __typename?: 'Customer';
+        email?: string | null;
+    } | null;
+};
+
+export type GetCustomerInformationQueryVariables = Exact<{
+    [key: string]: never;
+}>;
+
+export type GetCustomerInformationQuery = {
+    __typename?: 'Query';
+    customer?: {
+        __typename?: 'Customer';
+        id?: number | null;
+        firstname?: string | null;
+        lastname?: string | null;
+        email?: string | null;
+        taxvat?: string | null;
+        is_subscribed?: boolean | null;
+        default_shipping?: string | null;
+        mp_quote_id?: number | null;
+    } | null;
+};
+
+export type SetCustomerInformationMutationVariables = Exact<{
+    customerInput: CustomerInput;
+}>;
+
+export type SetCustomerInformationMutation = {
+    __typename?: 'Mutation';
+    updateCustomer?: {
+        __typename?: 'CustomerOutput';
+        customer: {
+            __typename?: 'Customer';
+            id?: number | null;
+            firstname?: string | null;
+            lastname?: string | null;
+            email?: string | null;
+            taxvat?: string | null;
+            is_subscribed?: boolean | null;
+            default_shipping?: string | null;
+            mp_quote_id?: number | null;
+        };
+    } | null;
+};
+
+export type AccountInformationPageFragmentFragment = {
+    __typename?: 'Customer';
+    id?: number | null;
+    firstname?: string | null;
+    lastname?: string | null;
+    email?: string | null;
+    taxvat?: string | null;
+    is_subscribed?: boolean | null;
+    default_shipping?: string | null;
+    mp_quote_id?: number | null;
+};
+
+export type GetProductDetailForAtcDialogBySkuQueryVariables = Exact<{
     sku: Scalars['String'];
     configurableOptionValues?: InputMaybe<Array<Scalars['ID']> | Scalars['ID']>;
 }>;
 
-export type GetProductDetailForAtcDialogQuery = {
+export type GetProductDetailForAtcDialogBySkuQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -8357,748 +8768,6 @@ export type GetProductDetailForAtcDialogQuery = {
     } | null;
 };
 
-export type AddProductToCartFromDialogMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    cartItem: CartItemInput;
-}>;
-
-export type AddProductToCartFromDialogMutation = {
-    __typename?: 'Mutation';
-    addProductsToCart?: {
-        __typename?: 'AddProductsToCartOutput';
-        cart: {
-            __typename?: 'Cart';
-            id: string;
-            total_quantity: number;
-            prices?: {
-                __typename?: 'CartPrices';
-                subtotal_excluding_tax?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-                subtotal_including_tax?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-            } | null;
-            items?: Array<
-                | {
-                      __typename?: 'BundleCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'ConfigurableCartItem';
-                      uid: string;
-                      quantity: number;
-                      configurable_options: Array<{
-                          __typename?: 'SelectedConfigurableOption';
-                          configurable_product_option_uid: string;
-                          option_label: string;
-                          configurable_product_option_value_uid: string;
-                          value_label: string;
-                      } | null>;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'DownloadableCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'GiftCardCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'SimpleCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'VirtualCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | null
-            > | null;
-        };
-    } | null;
-};
-
 export type CustomerAddressBookAddressFragmentFragment = {
     __typename: 'CustomerAddress';
     company?: string | null;
@@ -9119,6 +8788,67 @@ export type CustomerAddressBookAddressFragmentFragment = {
         region?: string | null;
         region_code?: string | null;
         region_id?: number | null;
+    } | null;
+};
+
+export type AddNewCustomerAddressToAddressBookMutationVariables = Exact<{
+    address: CustomerAddressInput;
+}>;
+
+export type AddNewCustomerAddressToAddressBookMutation = {
+    __typename?: 'Mutation';
+    createCustomerAddress?: {
+        __typename: 'CustomerAddress';
+        id?: number | null;
+        company?: string | null;
+        city?: string | null;
+        country_code?: CountryCodeEnum | null;
+        default_billing?: boolean | null;
+        default_shipping?: boolean | null;
+        firstname?: string | null;
+        lastname?: string | null;
+        middlename?: string | null;
+        postcode?: string | null;
+        street?: Array<string | null> | null;
+        telephone?: string | null;
+        vat_id?: string | null;
+        region?: {
+            __typename?: 'CustomerAddressRegion';
+            region?: string | null;
+            region_code?: string | null;
+            region_id?: number | null;
+        } | null;
+    } | null;
+};
+
+export type UpdateCustomerAddressInAddressBookMutationVariables = Exact<{
+    addressId: Scalars['Int'];
+    updated_address: CustomerAddressInput;
+}>;
+
+export type UpdateCustomerAddressInAddressBookMutation = {
+    __typename?: 'Mutation';
+    updateCustomerAddress?: {
+        __typename: 'CustomerAddress';
+        id?: number | null;
+        company?: string | null;
+        city?: string | null;
+        country_code?: CountryCodeEnum | null;
+        default_billing?: boolean | null;
+        default_shipping?: boolean | null;
+        firstname?: string | null;
+        lastname?: string | null;
+        middlename?: string | null;
+        postcode?: string | null;
+        street?: Array<string | null> | null;
+        telephone?: string | null;
+        vat_id?: string | null;
+        region?: {
+            __typename?: 'CustomerAddressRegion';
+            region?: string | null;
+            region_code?: string | null;
+            region_id?: number | null;
+        } | null;
     } | null;
 };
 
@@ -9161,47 +8891,37 @@ export type GetCustomerAddressesForAddressBookQuery = {
     } | null> | null;
 };
 
-export type AddNewCustomerAddressToAddressBookMutationVariables = Exact<{
-    address: CustomerAddressInput;
+export type GetCustomerCartAddressesForAddressBookQueryVariables = Exact<{
+    [key: string]: never;
 }>;
 
-export type AddNewCustomerAddressToAddressBookMutation = {
-    __typename?: 'Mutation';
-    createCustomerAddress?: {
-        __typename?: 'CustomerAddress';
-        id?: number | null;
-    } | null;
-};
-
-export type UpdateCustomerAddressInAddressBookMutationVariables = Exact<{
-    addressId: Scalars['Int'];
-    updated_address: CustomerAddressInput;
-}>;
-
-export type UpdateCustomerAddressInAddressBookMutation = {
-    __typename?: 'Mutation';
-    updateCustomerAddress?: {
-        __typename: 'CustomerAddress';
-        id?: number | null;
-        company?: string | null;
-        city?: string | null;
-        country_code?: CountryCodeEnum | null;
-        default_billing?: boolean | null;
-        default_shipping?: boolean | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        middlename?: string | null;
-        postcode?: string | null;
-        street?: Array<string | null> | null;
-        telephone?: string | null;
-        vat_id?: string | null;
-        region?: {
-            __typename?: 'CustomerAddressRegion';
-            region?: string | null;
-            region_code?: string | null;
-            region_id?: number | null;
-        } | null;
-    } | null;
+export type GetCustomerCartAddressesForAddressBookQuery = {
+    __typename?: 'Query';
+    customerCart: {
+        __typename?: 'Cart';
+        id: string;
+        email?: string | null;
+        shipping_addresses: Array<{
+            __typename?: 'ShippingCartAddress';
+            city: string;
+            firstname: string;
+            lastname: string;
+            postcode?: string | null;
+            street: Array<string | null>;
+            telephone?: string | null;
+            country: {
+                __typename?: 'CartAddressCountry';
+                code: string;
+                label: string;
+            };
+            region?: {
+                __typename?: 'CartAddressRegion';
+                code?: string | null;
+                label?: string | null;
+                region_id?: number | null;
+            } | null;
+        } | null>;
+    };
 };
 
 export type DeleteCustomerAddressFromAddressBookMutationVariables = Exact<{
@@ -9211,16 +8931,6 @@ export type DeleteCustomerAddressFromAddressBookMutationVariables = Exact<{
 export type DeleteCustomerAddressFromAddressBookMutation = {
     __typename?: 'Mutation';
     deleteCustomerAddress?: boolean | null;
-};
-
-export type SignOutFromModalMutationVariables = Exact<{ [key: string]: never }>;
-
-export type SignOutFromModalMutation = {
-    __typename?: 'Mutation';
-    revokeCustomerToken?: {
-        __typename?: 'RevokeCustomerTokenOutput';
-        result: boolean;
-    } | null;
 };
 
 export type GetBreadcrumbsQueryVariables = Exact<{
@@ -9244,125 +8954,6 @@ export type GetBreadcrumbsQuery = {
                 category_url_path?: string | null;
             } | null> | null;
         } | null> | null;
-    } | null;
-};
-
-export type GetConfigDetailsForBuyLaterNotesQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetConfigDetailsForBuyLaterNotesQuery = {
-    __typename?: 'Query';
-    mpSaveCartConfigs?: {
-        __typename?: 'MpSaveCartConfigsOutput';
-        enabled?: number | null;
-        button_title?: string | null;
-        allow_share?: number | null;
-        show_button_guest?: number | null;
-    } | null;
-};
-
-export type GetSaveCartsQueryVariables = Exact<{
-    pageSize?: InputMaybe<Scalars['Int']>;
-    currentPage?: InputMaybe<Scalars['Int']>;
-}>;
-
-export type GetSaveCartsQuery = {
-    __typename?: 'Query';
-    mpSaveCartGetCarts?: {
-        __typename?: 'MpGetCartsOutput';
-        total_count?: number | null;
-        page_info?: {
-            __typename?: 'SearchResultPageInfo';
-            current_page?: number | null;
-            page_size?: number | null;
-        } | null;
-        items?: Array<{
-            __typename?: 'MpCartsOutput';
-            cart_id?: number | null;
-            created_at?: string | null;
-            cart_name?: string | null;
-            description?: string | null;
-            share_url?: string | null;
-            token?: string | null;
-            cart_total?: {
-                __typename?: 'Money';
-                currency?: CurrencyEnum | null;
-                value?: number | null;
-            } | null;
-            items?: Array<{
-                __typename?: 'CartItemsOutput';
-                cart_id?: string | null;
-                cart_item_id?: number | null;
-                product_name?: string | null;
-                image?: string | null;
-                price?: string | null;
-                qty?: number | null;
-                sku?: string | null;
-                subtotal_converted?: string | null;
-            } | null> | null;
-        } | null> | null;
-    } | null;
-};
-
-export type DeleteSaveCartMutationVariables = Exact<{
-    token: Scalars['String'];
-}>;
-
-export type DeleteSaveCartMutation = {
-    __typename?: 'Mutation';
-    mpSaveCartDeleteCart?: boolean | null;
-};
-
-export type RestoreSaveCartMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    token: Scalars['String'];
-}>;
-
-export type RestoreSaveCartMutation = {
-    __typename?: 'Mutation';
-    mpSaveCartRestoreCart?: boolean | null;
-};
-
-export type GetCartIdQueryVariables = Exact<{
-    cartId: Scalars['String'];
-}>;
-
-export type GetCartIdQuery = {
-    __typename?: 'Query';
-    cart?: { __typename?: 'Cart'; id: string } | null;
-};
-
-export type GetShareCartMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    token: Scalars['String'];
-}>;
-
-export type GetShareCartMutation = {
-    __typename?: 'Mutation';
-    mpSaveCartShareCart?: boolean | null;
-};
-
-export type GetMpSaveCartMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    cartName: Scalars['String'];
-    description?: InputMaybe<Scalars['String']>;
-}>;
-
-export type GetMpSaveCartMutation = {
-    __typename?: 'Mutation';
-    o_mpSaveCart?: boolean | null;
-};
-
-export type MpSaveCartConfigsQueryVariables = Exact<{ [key: string]: never }>;
-
-export type MpSaveCartConfigsQuery = {
-    __typename?: 'Query';
-    mpSaveCartConfigs?: {
-        __typename?: 'MpSaveCartConfigsOutput';
-        button_title?: string | null;
-        enabled?: number | null;
-        show_button_guest?: number | null;
     } | null;
 };
 
@@ -16185,1290 +15776,6 @@ export type TaxSummaryFragmentFragment = {
         };
     } | null> | null;
 };
-
-export type ProductDetailBySkuQueryVariables = Exact<{
-    sku?: InputMaybe<Scalars['String']>;
-}>;
-
-export type ProductDetailBySkuQuery = {
-    __typename?: 'Query';
-    products?: {
-        __typename?: 'Products';
-        items?: Array<
-            | {
-                  __typename?: 'BundleProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-              }
-            | {
-                  __typename?: 'ConfigurableProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-                  configurable_options?: Array<{
-                      __typename?: 'ConfigurableProductOptions';
-                      attribute_code?: string | null;
-                      attribute_id?: string | null;
-                      uid: string;
-                      label?: string | null;
-                      values?: Array<{
-                          __typename?: 'ConfigurableProductOptionsValues';
-                          default_label?: string | null;
-                          label?: string | null;
-                          store_label?: string | null;
-                          use_default_value?: boolean | null;
-                          value_index?: number | null;
-                          swatch_data?:
-                              | {
-                                    __typename?: 'ColorSwatchData';
-                                    value?: string | null;
-                                }
-                              | {
-                                    __typename?: 'ImageSwatchData';
-                                    thumbnail?: string | null;
-                                    value?: string | null;
-                                }
-                              | {
-                                    __typename?: 'TextSwatchData';
-                                    value?: string | null;
-                                }
-                              | null;
-                      } | null> | null;
-                  } | null> | null;
-                  variants?: Array<{
-                      __typename?: 'ConfigurableVariant';
-                      attributes?: Array<{
-                          __typename?: 'ConfigurableAttributeOption';
-                          code?: string | null;
-                          value_index?: number | null;
-                      } | null> | null;
-                      product?: {
-                          __typename?: 'SimpleProduct';
-                          uid: string;
-                          sku?: string | null;
-                          stock_status?: ProductStockStatus | null;
-                          price?: {
-                              __typename?: 'ProductPrices';
-                              regularPrice?: {
-                                  __typename?: 'Price';
-                                  amount?: {
-                                      __typename?: 'Money';
-                                      currency?: CurrencyEnum | null;
-                                      value?: number | null;
-                                  } | null;
-                              } | null;
-                          } | null;
-                          price_range: {
-                              __typename?: 'PriceRange';
-                              maximum_price?: {
-                                  __typename?: 'ProductPrice';
-                                  final_price: {
-                                      __typename?: 'Money';
-                                      currency?: CurrencyEnum | null;
-                                      value?: number | null;
-                                  };
-                              } | null;
-                          };
-                      } | null;
-                  } | null> | null;
-              }
-            | {
-                  __typename?: 'DownloadableProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-              }
-            | {
-                  __typename?: 'GiftCardProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-              }
-            | {
-                  __typename?: 'GroupedProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-              }
-            | {
-                  __typename?: 'SimpleProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-              }
-            | {
-                  __typename?: 'VirtualProduct';
-                  id?: number | null;
-                  uid: string;
-                  sku?: string | null;
-              }
-            | null
-        > | null;
-    } | null;
-};
-
-export type UpdateConfigurableOptionsMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    cartItemId: Scalars['ID'];
-    parentSku: Scalars['String'];
-    variantSku: Scalars['String'];
-    quantity: Scalars['Float'];
-}>;
-
-export type UpdateConfigurableOptionsMutation = {
-    __typename?: 'Mutation';
-    addConfigurableProductsToCart?: {
-        __typename?: 'AddConfigurableProductsToCartOutput';
-        cart: { __typename?: 'Cart'; id: string };
-    } | null;
-    removeItemFromCart?: {
-        __typename?: 'RemoveItemFromCartOutput';
-        cart: {
-            __typename?: 'Cart';
-            id: string;
-            total_quantity: number;
-            applied_coupons?: Array<{
-                __typename?: 'AppliedCoupon';
-                code: string;
-            } | null> | null;
-            applied_gift_cards?: Array<{
-                __typename?: 'AppliedGiftCard';
-                code?: string | null;
-                current_balance?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-                applied_balance?: {
-                    __typename?: 'Money';
-                    value?: number | null;
-                    currency?: CurrencyEnum | null;
-                } | null;
-            } | null> | null;
-            items?: Array<
-                | {
-                      __typename?: 'BundleCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                        code?: string | null;
-                                        value_index?: number | null;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        stock_status?: ProductStockStatus | null;
-                                        small_image?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          row_total: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                      errors?: Array<{
-                          __typename?: 'CartItemError';
-                          code: CartItemErrorType;
-                          message: string;
-                      } | null> | null;
-                  }
-                | {
-                      __typename?: 'ConfigurableCartItem';
-                      uid: string;
-                      quantity: number;
-                      configurable_options: Array<{
-                          __typename?: 'SelectedConfigurableOption';
-                          id: number;
-                          configurable_product_option_uid: string;
-                          option_label: string;
-                          configurable_product_option_value_uid: string;
-                          value_label: string;
-                          value_id: number;
-                      } | null>;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                        code?: string | null;
-                                        value_index?: number | null;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        stock_status?: ProductStockStatus | null;
-                                        small_image?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          row_total: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                      errors?: Array<{
-                          __typename?: 'CartItemError';
-                          code: CartItemErrorType;
-                          message: string;
-                      } | null> | null;
-                  }
-                | {
-                      __typename?: 'DownloadableCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                        code?: string | null;
-                                        value_index?: number | null;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        stock_status?: ProductStockStatus | null;
-                                        small_image?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          row_total: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                      errors?: Array<{
-                          __typename?: 'CartItemError';
-                          code: CartItemErrorType;
-                          message: string;
-                      } | null> | null;
-                  }
-                | {
-                      __typename?: 'GiftCardCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                        code?: string | null;
-                                        value_index?: number | null;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        stock_status?: ProductStockStatus | null;
-                                        small_image?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          row_total: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                      errors?: Array<{
-                          __typename?: 'CartItemError';
-                          code: CartItemErrorType;
-                          message: string;
-                      } | null> | null;
-                  }
-                | {
-                      __typename?: 'SimpleCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                        code?: string | null;
-                                        value_index?: number | null;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        stock_status?: ProductStockStatus | null;
-                                        small_image?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          row_total: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                      errors?: Array<{
-                          __typename?: 'CartItemError';
-                          code: CartItemErrorType;
-                          message: string;
-                      } | null> | null;
-                  }
-                | {
-                      __typename?: 'VirtualCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                        code?: string | null;
-                                        value_index?: number | null;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        stock_status?: ProductStockStatus | null;
-                                        small_image?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                                small_image?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          row_total: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                      errors?: Array<{
-                          __typename?: 'CartItemError';
-                          code: CartItemErrorType;
-                          message: string;
-                      } | null> | null;
-                  }
-                | null
-            > | null;
-            prices?: {
-                __typename?: 'CartPrices';
-                subtotal_excluding_tax?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-                subtotal_including_tax?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-                gift_options?: {
-                    __typename?: 'GiftOptionsPrices';
-                    printed_card?: {
-                        __typename?: 'Money';
-                        value?: number | null;
-                        currency?: CurrencyEnum | null;
-                    } | null;
-                } | null;
-                applied_taxes?: Array<{
-                    __typename?: 'CartTaxItem';
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null> | null;
-                discounts?: Array<{
-                    __typename?: 'Discount';
-                    label: string;
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null> | null;
-                grand_total?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-            } | null;
-            shipping_addresses: Array<{
-                __typename?: 'ShippingCartAddress';
-                street: Array<string | null>;
-                selected_shipping_method?: {
-                    __typename?: 'SelectedShippingMethod';
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null;
-            } | null>;
-        };
-    } | null;
-};
-
-type ProductFormFragment_BundleProduct_Fragment = {
-    __typename?: 'BundleProduct';
-    uid: string;
-    sku?: string | null;
-};
-
-type ProductFormFragment_ConfigurableProduct_Fragment = {
-    __typename?: 'ConfigurableProduct';
-    uid: string;
-    sku?: string | null;
-    configurable_options?: Array<{
-        __typename?: 'ConfigurableProductOptions';
-        attribute_code?: string | null;
-        attribute_id?: string | null;
-        uid: string;
-        label?: string | null;
-        values?: Array<{
-            __typename?: 'ConfigurableProductOptionsValues';
-            default_label?: string | null;
-            label?: string | null;
-            store_label?: string | null;
-            use_default_value?: boolean | null;
-            value_index?: number | null;
-            swatch_data?:
-                | { __typename?: 'ColorSwatchData'; value?: string | null }
-                | {
-                      __typename?: 'ImageSwatchData';
-                      thumbnail?: string | null;
-                      value?: string | null;
-                  }
-                | { __typename?: 'TextSwatchData'; value?: string | null }
-                | null;
-        } | null> | null;
-    } | null> | null;
-    variants?: Array<{
-        __typename?: 'ConfigurableVariant';
-        attributes?: Array<{
-            __typename?: 'ConfigurableAttributeOption';
-            code?: string | null;
-            value_index?: number | null;
-        } | null> | null;
-        product?: {
-            __typename?: 'SimpleProduct';
-            uid: string;
-            sku?: string | null;
-            stock_status?: ProductStockStatus | null;
-            price?: {
-                __typename?: 'ProductPrices';
-                regularPrice?: {
-                    __typename?: 'Price';
-                    amount?: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    } | null;
-                } | null;
-            } | null;
-            price_range: {
-                __typename?: 'PriceRange';
-                maximum_price?: {
-                    __typename?: 'ProductPrice';
-                    final_price: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null;
-            };
-        } | null;
-    } | null> | null;
-};
-
-type ProductFormFragment_DownloadableProduct_Fragment = {
-    __typename?: 'DownloadableProduct';
-    uid: string;
-    sku?: string | null;
-};
-
-type ProductFormFragment_GiftCardProduct_Fragment = {
-    __typename?: 'GiftCardProduct';
-    uid: string;
-    sku?: string | null;
-};
-
-type ProductFormFragment_GroupedProduct_Fragment = {
-    __typename?: 'GroupedProduct';
-    uid: string;
-    sku?: string | null;
-};
-
-type ProductFormFragment_SimpleProduct_Fragment = {
-    __typename?: 'SimpleProduct';
-    uid: string;
-    sku?: string | null;
-};
-
-type ProductFormFragment_VirtualProduct_Fragment = {
-    __typename?: 'VirtualProduct';
-    uid: string;
-    sku?: string | null;
-};
-
-export type ProductFormFragmentFragment =
-    | ProductFormFragment_BundleProduct_Fragment
-    | ProductFormFragment_ConfigurableProduct_Fragment
-    | ProductFormFragment_DownloadableProduct_Fragment
-    | ProductFormFragment_GiftCardProduct_Fragment
-    | ProductFormFragment_GroupedProduct_Fragment
-    | ProductFormFragment_SimpleProduct_Fragment
-    | ProductFormFragment_VirtualProduct_Fragment;
 
 export type GetProductListingQueryVariables = Exact<{
     cartId: Scalars['String'];
@@ -24320,111 +22627,17 @@ export type CartPageFragmentFragment = {
     } | null>;
 };
 
-export type GetCustomerAddressesQueryVariables = Exact<{
-    [key: string]: never;
+export type SetGuestEmailOnCartMutationVariables = Exact<{
+    cartId: Scalars['String'];
+    email: Scalars['String'];
 }>;
 
-export type GetCustomerAddressesQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        addresses?: Array<{
-            __typename?: 'CustomerAddress';
-            id?: number | null;
-            city?: string | null;
-            country_code?: CountryCodeEnum | null;
-            default_shipping?: boolean | null;
-            default_billing?: boolean | null;
-            firstname?: string | null;
-            lastname?: string | null;
-            postcode?: string | null;
-            street?: Array<string | null> | null;
-            telephone?: string | null;
-            region?: {
-                __typename?: 'CustomerAddressRegion';
-                region?: string | null;
-                region_code?: string | null;
-                region_id?: number | null;
-            } | null;
-        } | null> | null;
+export type SetGuestEmailOnCartMutation = {
+    __typename?: 'Mutation';
+    setGuestEmailOnCart?: {
+        __typename?: 'SetGuestEmailOnCartOutput';
+        cart: { __typename?: 'Cart'; id: string };
     } | null;
-};
-
-export type GetCustomerCartAddressQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetCustomerCartAddressQuery = {
-    __typename?: 'Query';
-    customerCart: {
-        __typename?: 'Cart';
-        id: string;
-        email?: string | null;
-        shipping_addresses: Array<{
-            __typename?: 'ShippingCartAddress';
-            city: string;
-            firstname: string;
-            lastname: string;
-            postcode?: string | null;
-            street: Array<string | null>;
-            telephone?: string | null;
-            country: {
-                __typename?: 'CartAddressCountry';
-                code: string;
-                label: string;
-            };
-            region?: {
-                __typename?: 'CartAddressRegion';
-                code?: string | null;
-                label?: string | null;
-                region_id?: number | null;
-            } | null;
-        } | null>;
-    };
-};
-
-export type CustomerAddressFragmentFragment = {
-    __typename?: 'CustomerAddress';
-    id?: number | null;
-    city?: string | null;
-    country_code?: CountryCodeEnum | null;
-    default_shipping?: boolean | null;
-    default_billing?: boolean | null;
-    firstname?: string | null;
-    lastname?: string | null;
-    postcode?: string | null;
-    street?: Array<string | null> | null;
-    telephone?: string | null;
-    region?: {
-        __typename?: 'CustomerAddressRegion';
-        region?: string | null;
-        region_code?: string | null;
-        region_id?: number | null;
-    } | null;
-};
-
-export type AddressBookFragmentFragment = {
-    __typename?: 'Customer';
-    id?: number | null;
-    addresses?: Array<{
-        __typename?: 'CustomerAddress';
-        id?: number | null;
-        city?: string | null;
-        country_code?: CountryCodeEnum | null;
-        default_shipping?: boolean | null;
-        default_billing?: boolean | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        postcode?: string | null;
-        street?: Array<string | null> | null;
-        telephone?: string | null;
-        region?: {
-            __typename?: 'CustomerAddressRegion';
-            region?: string | null;
-            region_code?: string | null;
-            region_id?: number | null;
-        } | null;
-    } | null> | null;
 };
 
 export type GetIsBillingAddressSameQueryVariables = Exact<{
@@ -26264,50 +24477,6 @@ export type SetOrderAttributesMutation = {
     } | null;
 };
 
-export type CreateAccountAfterCheckoutMutationVariables = Exact<{
-    email: Scalars['String'];
-    firstname: Scalars['String'];
-    lastname: Scalars['String'];
-    password: Scalars['String'];
-    is_subscribed: Scalars['Boolean'];
-}>;
-
-export type CreateAccountAfterCheckoutMutation = {
-    __typename?: 'Mutation';
-    createCustomer?: {
-        __typename?: 'CustomerOutput';
-        customer: { __typename?: 'Customer'; email?: string | null };
-    } | null;
-};
-
-export type GetCustomerAfterCheckoutQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetCustomerAfterCheckoutQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        email?: string | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        is_subscribed?: boolean | null;
-    } | null;
-};
-
-export type SignInAfterCheckoutMutationVariables = Exact<{
-    email: Scalars['String'];
-    password: Scalars['String'];
-}>;
-
-export type SignInAfterCheckoutMutation = {
-    __typename?: 'Mutation';
-    generateCustomerToken?: {
-        __typename?: 'CustomerToken';
-        token?: string | null;
-    } | null;
-};
-
 export type OrderConfirmationPageFragmentFragment = {
     __typename?: 'Cart';
     id: string;
@@ -27231,56 +25400,15 @@ export type SetPaymentMethodOnCartMutation = {
     } | null;
 };
 
-export type CreateCustomerAddressMutationVariables = Exact<{
-    address: CustomerAddressInput;
+export type IsEmailAvailableQueryVariables = Exact<{
+    email: Scalars['String'];
 }>;
 
-export type CreateCustomerAddressMutation = {
-    __typename?: 'Mutation';
-    createCustomerAddress?: {
-        __typename?: 'CustomerAddress';
-        id?: number | null;
-        city?: string | null;
-        country_code?: CountryCodeEnum | null;
-        default_shipping?: boolean | null;
-        default_billing?: boolean | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        postcode?: string | null;
-        street?: Array<string | null> | null;
-        telephone?: string | null;
-        region?: {
-            __typename?: 'CustomerAddressRegion';
-            region?: string | null;
-            region_code?: string | null;
-            region_id?: number | null;
-        } | null;
-    } | null;
-};
-
-export type UpdateCustomerAddressMutationVariables = Exact<{
-    addressId: Scalars['Int'];
-    address: CustomerAddressInput;
-}>;
-
-export type UpdateCustomerAddressMutation = {
-    __typename?: 'Mutation';
-    updateCustomerAddress?: {
-        __typename?: 'CustomerAddress';
-        id?: number | null;
-    } | null;
-};
-
-export type GetCustomerQueryVariables = Exact<{ [key: string]: never }>;
-
-export type GetCustomerQuery = {
+export type IsEmailAvailableQuery = {
     __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        default_shipping?: string | null;
-        email?: string | null;
-        firstname?: string | null;
-        lastname?: string | null;
+    isEmailAvailable?: {
+        __typename?: 'IsEmailAvailableOutput';
+        is_email_available?: boolean | null;
     } | null;
 };
 
@@ -27302,50 +25430,11 @@ export type SetGuestShippingMutation = {
             __typename?: 'Cart';
             id: string;
             email?: string | null;
-            shipping_addresses: Array<{
-                __typename?: 'ShippingCartAddress';
-                city: string;
-                firstname: string;
-                lastname: string;
-                postcode?: string | null;
-                street: Array<string | null>;
-                telephone?: string | null;
-                country: {
-                    __typename?: 'CartAddressCountry';
-                    code: string;
-                    label: string;
-                };
-                region?: {
-                    __typename?: 'CartAddressRegion';
-                    code?: string | null;
-                    label?: string | null;
-                    region_id?: number | null;
-                } | null;
-                available_shipping_methods?: Array<{
-                    __typename?: 'AvailableShippingMethod';
-                    available: boolean;
-                    carrier_code: string;
-                    carrier_title: string;
-                    method_code?: string | null;
-                    method_title?: string | null;
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null> | null;
-                selected_shipping_method?: {
-                    __typename?: 'SelectedShippingMethod';
-                    carrier_code: string;
-                    method_code: string;
-                    method_title: string;
-                    amount: {
-                        __typename?: 'Money';
-                        currency?: CurrencyEnum | null;
-                        value?: number | null;
-                    };
-                } | null;
-            } | null>;
+            available_payment_methods?: Array<{
+                __typename?: 'AvailablePaymentMethod';
+                code: string;
+                title: string;
+            } | null> | null;
             items?: Array<
                 | {
                       __typename?: 'BundleCartItem';
@@ -27422,11 +25511,50 @@ export type SetGuestShippingMutation = {
                     value?: number | null;
                 } | null;
             } | null;
-            available_payment_methods?: Array<{
-                __typename?: 'AvailablePaymentMethod';
-                code: string;
-                title: string;
-            } | null> | null;
+            shipping_addresses: Array<{
+                __typename?: 'ShippingCartAddress';
+                city: string;
+                firstname: string;
+                lastname: string;
+                postcode?: string | null;
+                street: Array<string | null>;
+                telephone?: string | null;
+                country: {
+                    __typename?: 'CartAddressCountry';
+                    code: string;
+                    label: string;
+                };
+                region?: {
+                    __typename?: 'CartAddressRegion';
+                    code?: string | null;
+                    label?: string | null;
+                    region_id?: number | null;
+                } | null;
+                selected_shipping_method?: {
+                    __typename?: 'SelectedShippingMethod';
+                    carrier_code: string;
+                    method_code: string;
+                    method_title: string;
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null;
+                available_shipping_methods?: Array<{
+                    __typename?: 'AvailableShippingMethod';
+                    available: boolean;
+                    carrier_code: string;
+                    carrier_title: string;
+                    method_code?: string | null;
+                    method_title?: string | null;
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null> | null;
+            } | null>;
             applied_gift_cards?: Array<{
                 __typename?: 'AppliedGiftCard';
                 code?: string | null;
@@ -27437,18 +25565,6 @@ export type SetGuestShippingMutation = {
                 } | null;
             } | null> | null;
         };
-    } | null;
-};
-
-export type IsEmailAvailableQueryVariables = Exact<{
-    email: Scalars['String'];
-}>;
-
-export type IsEmailAvailableQuery = {
-    __typename?: 'Query';
-    isEmailAvailable?: {
-        __typename?: 'IsEmailAvailableOutput';
-        is_email_available?: boolean | null;
     } | null;
 };
 
@@ -28218,19 +26334,6 @@ export type GetCheckoutDetailsQuery = {
             __typename?: 'AvailablePaymentMethod';
             code: string;
         } | null> | null;
-    } | null;
-};
-
-export type GetCustomerForCheckoutQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetCustomerForCheckoutQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        default_shipping?: string | null;
-        firstname?: string | null;
     } | null;
 };
 
@@ -29363,11 +27466,11 @@ export type GetCmsDynamicBlocksQuery = {
     };
 };
 
-export type GetProductDetailForCmsDynamicBlockQueryVariables = Exact<{
+export type GetProductDetailForCmsDynamicBlockByUrlKeyQueryVariables = Exact<{
     urlKey: Scalars['String'];
 }>;
 
-export type GetProductDetailForCmsDynamicBlockQuery = {
+export type GetProductDetailForCmsDynamicBlockByUrlKeyQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -30276,37 +28379,11 @@ export type CreateAccountMutation = {
     } | null;
 };
 
-export type GetCustomerAfterCreateQueryVariables = Exact<{
+export type GetCustomerOrdersForCsrQueryVariables = Exact<{
     [key: string]: never;
 }>;
 
-export type GetCustomerAfterCreateQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        email?: string | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        is_subscribed?: boolean | null;
-    } | null;
-};
-
-export type SignInAfterCreateMutationVariables = Exact<{
-    email: Scalars['String'];
-    password: Scalars['String'];
-}>;
-
-export type SignInAfterCreateMutation = {
-    __typename?: 'Mutation';
-    generateCustomerToken?: {
-        __typename?: 'CustomerToken';
-        token?: string | null;
-    } | null;
-};
-
-export type GetCustomerOrdersQueryVariables = Exact<{ [key: string]: never }>;
-
-export type GetCustomerOrdersQuery = {
+export type GetCustomerOrdersForCsrQuery = {
     __typename?: 'Query';
     customer?: {
         __typename?: 'Customer';
@@ -30410,9 +28487,18 @@ export type GetImageBySkuQuery = {
     } | null;
 };
 
-export type SignOutFromMenuMutationVariables = Exact<{ [key: string]: never }>;
+export type RequestPasswordResetEmailMutationVariables = Exact<{
+    email: Scalars['String'];
+}>;
 
-export type SignOutFromMenuMutation = {
+export type RequestPasswordResetEmailMutation = {
+    __typename?: 'Mutation';
+    requestPasswordResetEmail?: boolean | null;
+};
+
+export type SignOutMutationVariables = Exact<{ [key: string]: never }>;
+
+export type SignOutMutation = {
     __typename?: 'Mutation';
     revokeCustomerToken?: {
         __typename?: 'RevokeCustomerTokenOutput';
@@ -32044,21 +30130,6 @@ export type MiniCartFragmentFragment = {
     > | null;
 };
 
-export type GetCustomerForLeftNavQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetCustomerForLeftNavQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        email?: string | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        is_subscribed?: boolean | null;
-    } | null;
-};
-
 export type SubscribeToNewsletterMutationVariables = Exact<{
     email: Scalars['String'];
 }>;
@@ -33081,15 +31152,17 @@ export type GetSimpleProductQuery = {
     } | null;
 };
 
-export type AddProductToCartMutationVariables = Exact<{
+export type AddConfigurableProductToCartMutationVariables = Exact<{
     cartId: Scalars['String'];
-    product: CartItemInput;
+    quantity: Scalars['Float'];
+    sku: Scalars['String'];
+    parentSku: Scalars['String'];
 }>;
 
-export type AddProductToCartMutation = {
+export type AddConfigurableProductToCartMutation = {
     __typename?: 'Mutation';
-    addProductsToCart?: {
-        __typename?: 'AddProductsToCartOutput';
+    addConfigurableProductsToCart?: {
+        __typename?: 'AddConfigurableProductsToCartOutput';
         cart: {
             __typename?: 'Cart';
             id: string;
@@ -33823,17 +31896,15 @@ export type AddProductToCartMutation = {
     } | null;
 };
 
-export type AddConfigurableProductToCartMutationVariables = Exact<{
+export type AddProductToCartMutationVariables = Exact<{
     cartId: Scalars['String'];
-    quantity: Scalars['Float'];
-    sku: Scalars['String'];
-    parentSku: Scalars['String'];
+    product: CartItemInput;
 }>;
 
-export type AddConfigurableProductToCartMutation = {
+export type AddProductToCartMutation = {
     __typename?: 'Mutation';
-    addConfigurableProductsToCart?: {
-        __typename?: 'AddConfigurableProductsToCartOutput';
+    addProductsToCart?: {
+        __typename?: 'AddProductsToCartOutput';
         cart: {
             __typename?: 'Cart';
             id: string;
@@ -35310,11 +33381,1339 @@ export type AddSimpleProductToCartMutation = {
     } | null;
 };
 
-export type GetParentSkuQueryVariables = Exact<{
+export type GetProductDetailForConfigurableOptionsBySkuQueryVariables = Exact<{
     sku?: InputMaybe<Scalars['String']>;
 }>;
 
-export type GetParentSkuQuery = {
+export type GetProductDetailForConfigurableOptionsBySkuQuery = {
+    __typename?: 'Query';
+    products?: {
+        __typename?: 'Products';
+        items?: Array<
+            | {
+                  __typename: 'BundleProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename: 'ConfigurableProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  configurable_options?: Array<{
+                      __typename?: 'ConfigurableProductOptions';
+                      attribute_code?: string | null;
+                      attribute_id?: string | null;
+                      uid: string;
+                      label?: string | null;
+                      values?: Array<{
+                          __typename?: 'ConfigurableProductOptionsValues';
+                          default_label?: string | null;
+                          label?: string | null;
+                          store_label?: string | null;
+                          use_default_value?: boolean | null;
+                          value_index?: number | null;
+                          swatch_data?:
+                              | {
+                                    __typename?: 'ColorSwatchData';
+                                    value?: string | null;
+                                }
+                              | {
+                                    __typename?: 'ImageSwatchData';
+                                    thumbnail?: string | null;
+                                    value?: string | null;
+                                }
+                              | {
+                                    __typename?: 'TextSwatchData';
+                                    value?: string | null;
+                                }
+                              | null;
+                      } | null> | null;
+                  } | null> | null;
+                  variants?: Array<{
+                      __typename?: 'ConfigurableVariant';
+                      attributes?: Array<{
+                          __typename?: 'ConfigurableAttributeOption';
+                          code?: string | null;
+                          value_index?: number | null;
+                      } | null> | null;
+                      product?: {
+                          __typename?: 'SimpleProduct';
+                          uid: string;
+                          sku?: string | null;
+                          stock_status?: ProductStockStatus | null;
+                          price?: {
+                              __typename?: 'ProductPrices';
+                              regularPrice?: {
+                                  __typename?: 'Price';
+                                  amount?: {
+                                      __typename?: 'Money';
+                                      currency?: CurrencyEnum | null;
+                                      value?: number | null;
+                                  } | null;
+                              } | null;
+                          } | null;
+                          price_range: {
+                              __typename?: 'PriceRange';
+                              maximum_price?: {
+                                  __typename?: 'ProductPrice';
+                                  final_price: {
+                                      __typename?: 'Money';
+                                      currency?: CurrencyEnum | null;
+                                      value?: number | null;
+                                  };
+                              } | null;
+                          };
+                          media_gallery_entries?: Array<{
+                              __typename?: 'MediaGalleryEntry';
+                              id?: number | null;
+                              disabled?: boolean | null;
+                              file?: string | null;
+                              label?: string | null;
+                              position?: number | null;
+                          } | null> | null;
+                      } | null;
+                  } | null> | null;
+              }
+            | {
+                  __typename: 'DownloadableProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename: 'GiftCardProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename: 'GroupedProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename: 'SimpleProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+              }
+            | {
+                  __typename: 'VirtualProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+              }
+            | null
+        > | null;
+    } | null;
+};
+
+export type UpdateConfigurableOptionsMutationVariables = Exact<{
+    cartId: Scalars['String'];
+    cartItemId: Scalars['ID'];
+    parentSku: Scalars['String'];
+    variantSku: Scalars['String'];
+    quantity: Scalars['Float'];
+}>;
+
+export type UpdateConfigurableOptionsMutation = {
+    __typename?: 'Mutation';
+    addConfigurableProductsToCart?: {
+        __typename?: 'AddConfigurableProductsToCartOutput';
+        cart: { __typename?: 'Cart'; id: string };
+    } | null;
+    removeItemFromCart?: {
+        __typename?: 'RemoveItemFromCartOutput';
+        cart: {
+            __typename?: 'Cart';
+            id: string;
+            total_quantity: number;
+            applied_coupons?: Array<{
+                __typename?: 'AppliedCoupon';
+                code: string;
+            } | null> | null;
+            applied_gift_cards?: Array<{
+                __typename?: 'AppliedGiftCard';
+                code?: string | null;
+                current_balance?: {
+                    __typename?: 'Money';
+                    currency?: CurrencyEnum | null;
+                    value?: number | null;
+                } | null;
+                applied_balance?: {
+                    __typename?: 'Money';
+                    value?: number | null;
+                    currency?: CurrencyEnum | null;
+                } | null;
+            } | null> | null;
+            items?: Array<
+                | {
+                      __typename?: 'BundleCartItem';
+                      uid: string;
+                      quantity: number;
+                      product:
+                          | {
+                                __typename?: 'BundleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'ConfigurableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                variants?: Array<{
+                                    __typename?: 'ConfigurableVariant';
+                                    attributes?: Array<{
+                                        __typename?: 'ConfigurableAttributeOption';
+                                        uid: string;
+                                        code?: string | null;
+                                        value_index?: number | null;
+                                    } | null> | null;
+                                    product?: {
+                                        __typename?: 'SimpleProduct';
+                                        uid: string;
+                                        stock_status?: ProductStockStatus | null;
+                                        small_image?: {
+                                            __typename?: 'ProductImage';
+                                            url?: string | null;
+                                        } | null;
+                                    } | null;
+                                } | null> | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'DownloadableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GiftCardProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GroupedProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'SimpleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'VirtualProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            };
+                      prices?: {
+                          __typename?: 'CartItemPrices';
+                          price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                          row_total: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          };
+                          total_item_discount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                      errors?: Array<{
+                          __typename?: 'CartItemError';
+                          code: CartItemErrorType;
+                          message: string;
+                      } | null> | null;
+                  }
+                | {
+                      __typename?: 'ConfigurableCartItem';
+                      uid: string;
+                      quantity: number;
+                      configurable_options: Array<{
+                          __typename?: 'SelectedConfigurableOption';
+                          id: number;
+                          configurable_product_option_uid: string;
+                          option_label: string;
+                          configurable_product_option_value_uid: string;
+                          value_label: string;
+                          value_id: number;
+                      } | null>;
+                      product:
+                          | {
+                                __typename?: 'BundleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'ConfigurableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                variants?: Array<{
+                                    __typename?: 'ConfigurableVariant';
+                                    attributes?: Array<{
+                                        __typename?: 'ConfigurableAttributeOption';
+                                        uid: string;
+                                        code?: string | null;
+                                        value_index?: number | null;
+                                    } | null> | null;
+                                    product?: {
+                                        __typename?: 'SimpleProduct';
+                                        uid: string;
+                                        stock_status?: ProductStockStatus | null;
+                                        small_image?: {
+                                            __typename?: 'ProductImage';
+                                            url?: string | null;
+                                        } | null;
+                                    } | null;
+                                } | null> | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'DownloadableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GiftCardProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GroupedProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'SimpleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'VirtualProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            };
+                      prices?: {
+                          __typename?: 'CartItemPrices';
+                          price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                          row_total: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          };
+                          total_item_discount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                      errors?: Array<{
+                          __typename?: 'CartItemError';
+                          code: CartItemErrorType;
+                          message: string;
+                      } | null> | null;
+                  }
+                | {
+                      __typename?: 'DownloadableCartItem';
+                      uid: string;
+                      quantity: number;
+                      product:
+                          | {
+                                __typename?: 'BundleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'ConfigurableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                variants?: Array<{
+                                    __typename?: 'ConfigurableVariant';
+                                    attributes?: Array<{
+                                        __typename?: 'ConfigurableAttributeOption';
+                                        uid: string;
+                                        code?: string | null;
+                                        value_index?: number | null;
+                                    } | null> | null;
+                                    product?: {
+                                        __typename?: 'SimpleProduct';
+                                        uid: string;
+                                        stock_status?: ProductStockStatus | null;
+                                        small_image?: {
+                                            __typename?: 'ProductImage';
+                                            url?: string | null;
+                                        } | null;
+                                    } | null;
+                                } | null> | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'DownloadableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GiftCardProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GroupedProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'SimpleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'VirtualProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            };
+                      prices?: {
+                          __typename?: 'CartItemPrices';
+                          price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                          row_total: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          };
+                          total_item_discount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                      errors?: Array<{
+                          __typename?: 'CartItemError';
+                          code: CartItemErrorType;
+                          message: string;
+                      } | null> | null;
+                  }
+                | {
+                      __typename?: 'GiftCardCartItem';
+                      uid: string;
+                      quantity: number;
+                      product:
+                          | {
+                                __typename?: 'BundleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'ConfigurableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                variants?: Array<{
+                                    __typename?: 'ConfigurableVariant';
+                                    attributes?: Array<{
+                                        __typename?: 'ConfigurableAttributeOption';
+                                        uid: string;
+                                        code?: string | null;
+                                        value_index?: number | null;
+                                    } | null> | null;
+                                    product?: {
+                                        __typename?: 'SimpleProduct';
+                                        uid: string;
+                                        stock_status?: ProductStockStatus | null;
+                                        small_image?: {
+                                            __typename?: 'ProductImage';
+                                            url?: string | null;
+                                        } | null;
+                                    } | null;
+                                } | null> | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'DownloadableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GiftCardProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GroupedProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'SimpleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'VirtualProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            };
+                      prices?: {
+                          __typename?: 'CartItemPrices';
+                          price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                          row_total: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          };
+                          total_item_discount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                      errors?: Array<{
+                          __typename?: 'CartItemError';
+                          code: CartItemErrorType;
+                          message: string;
+                      } | null> | null;
+                  }
+                | {
+                      __typename?: 'SimpleCartItem';
+                      uid: string;
+                      quantity: number;
+                      product:
+                          | {
+                                __typename?: 'BundleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'ConfigurableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                variants?: Array<{
+                                    __typename?: 'ConfigurableVariant';
+                                    attributes?: Array<{
+                                        __typename?: 'ConfigurableAttributeOption';
+                                        uid: string;
+                                        code?: string | null;
+                                        value_index?: number | null;
+                                    } | null> | null;
+                                    product?: {
+                                        __typename?: 'SimpleProduct';
+                                        uid: string;
+                                        stock_status?: ProductStockStatus | null;
+                                        small_image?: {
+                                            __typename?: 'ProductImage';
+                                            url?: string | null;
+                                        } | null;
+                                    } | null;
+                                } | null> | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'DownloadableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GiftCardProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GroupedProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'SimpleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'VirtualProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            };
+                      prices?: {
+                          __typename?: 'CartItemPrices';
+                          price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                          row_total: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          };
+                          total_item_discount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                      errors?: Array<{
+                          __typename?: 'CartItemError';
+                          code: CartItemErrorType;
+                          message: string;
+                      } | null> | null;
+                  }
+                | {
+                      __typename?: 'VirtualCartItem';
+                      uid: string;
+                      quantity: number;
+                      product:
+                          | {
+                                __typename?: 'BundleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'ConfigurableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                variants?: Array<{
+                                    __typename?: 'ConfigurableVariant';
+                                    attributes?: Array<{
+                                        __typename?: 'ConfigurableAttributeOption';
+                                        uid: string;
+                                        code?: string | null;
+                                        value_index?: number | null;
+                                    } | null> | null;
+                                    product?: {
+                                        __typename?: 'SimpleProduct';
+                                        uid: string;
+                                        stock_status?: ProductStockStatus | null;
+                                        small_image?: {
+                                            __typename?: 'ProductImage';
+                                            url?: string | null;
+                                        } | null;
+                                    } | null;
+                                } | null> | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'DownloadableProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GiftCardProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'GroupedProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'SimpleProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            }
+                          | {
+                                __typename?: 'VirtualProduct';
+                                uid: string;
+                                name?: string | null;
+                                sku?: string | null;
+                                url_key?: string | null;
+                                stock_status?: ProductStockStatus | null;
+                                thumbnail?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                                small_image?: {
+                                    __typename?: 'ProductImage';
+                                    url?: string | null;
+                                } | null;
+                            };
+                      prices?: {
+                          __typename?: 'CartItemPrices';
+                          price: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          };
+                          row_total: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          };
+                          total_item_discount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                      errors?: Array<{
+                          __typename?: 'CartItemError';
+                          code: CartItemErrorType;
+                          message: string;
+                      } | null> | null;
+                  }
+                | null
+            > | null;
+            prices?: {
+                __typename?: 'CartPrices';
+                subtotal_excluding_tax?: {
+                    __typename?: 'Money';
+                    currency?: CurrencyEnum | null;
+                    value?: number | null;
+                } | null;
+                subtotal_including_tax?: {
+                    __typename?: 'Money';
+                    currency?: CurrencyEnum | null;
+                    value?: number | null;
+                } | null;
+                gift_options?: {
+                    __typename?: 'GiftOptionsPrices';
+                    printed_card?: {
+                        __typename?: 'Money';
+                        value?: number | null;
+                        currency?: CurrencyEnum | null;
+                    } | null;
+                } | null;
+                applied_taxes?: Array<{
+                    __typename?: 'CartTaxItem';
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null> | null;
+                discounts?: Array<{
+                    __typename?: 'Discount';
+                    label: string;
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null> | null;
+                grand_total?: {
+                    __typename?: 'Money';
+                    currency?: CurrencyEnum | null;
+                    value?: number | null;
+                } | null;
+            } | null;
+            shipping_addresses: Array<{
+                __typename?: 'ShippingCartAddress';
+                street: Array<string | null>;
+                selected_shipping_method?: {
+                    __typename?: 'SelectedShippingMethod';
+                    amount: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null;
+            } | null>;
+        };
+    } | null;
+};
+
+type ProductFormFragment_BundleProduct_Fragment = {
+    __typename: 'BundleProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+};
+
+type ProductFormFragment_ConfigurableProduct_Fragment = {
+    __typename: 'ConfigurableProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+    configurable_options?: Array<{
+        __typename?: 'ConfigurableProductOptions';
+        attribute_code?: string | null;
+        attribute_id?: string | null;
+        uid: string;
+        label?: string | null;
+        values?: Array<{
+            __typename?: 'ConfigurableProductOptionsValues';
+            default_label?: string | null;
+            label?: string | null;
+            store_label?: string | null;
+            use_default_value?: boolean | null;
+            value_index?: number | null;
+            swatch_data?:
+                | { __typename?: 'ColorSwatchData'; value?: string | null }
+                | {
+                      __typename?: 'ImageSwatchData';
+                      thumbnail?: string | null;
+                      value?: string | null;
+                  }
+                | { __typename?: 'TextSwatchData'; value?: string | null }
+                | null;
+        } | null> | null;
+    } | null> | null;
+    variants?: Array<{
+        __typename?: 'ConfigurableVariant';
+        attributes?: Array<{
+            __typename?: 'ConfigurableAttributeOption';
+            code?: string | null;
+            value_index?: number | null;
+        } | null> | null;
+        product?: {
+            __typename?: 'SimpleProduct';
+            uid: string;
+            sku?: string | null;
+            stock_status?: ProductStockStatus | null;
+            price?: {
+                __typename?: 'ProductPrices';
+                regularPrice?: {
+                    __typename?: 'Price';
+                    amount?: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    } | null;
+                } | null;
+            } | null;
+            price_range: {
+                __typename?: 'PriceRange';
+                maximum_price?: {
+                    __typename?: 'ProductPrice';
+                    final_price: {
+                        __typename?: 'Money';
+                        currency?: CurrencyEnum | null;
+                        value?: number | null;
+                    };
+                } | null;
+            };
+            media_gallery_entries?: Array<{
+                __typename?: 'MediaGalleryEntry';
+                id?: number | null;
+                disabled?: boolean | null;
+                file?: string | null;
+                label?: string | null;
+                position?: number | null;
+            } | null> | null;
+        } | null;
+    } | null> | null;
+};
+
+type ProductFormFragment_DownloadableProduct_Fragment = {
+    __typename: 'DownloadableProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+};
+
+type ProductFormFragment_GiftCardProduct_Fragment = {
+    __typename: 'GiftCardProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+};
+
+type ProductFormFragment_GroupedProduct_Fragment = {
+    __typename: 'GroupedProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+};
+
+type ProductFormFragment_SimpleProduct_Fragment = {
+    __typename: 'SimpleProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+};
+
+type ProductFormFragment_VirtualProduct_Fragment = {
+    __typename: 'VirtualProduct';
+    uid: string;
+    name?: string | null;
+    sku?: string | null;
+    url_key?: string | null;
+};
+
+export type ProductFormFragmentFragment =
+    | ProductFormFragment_BundleProduct_Fragment
+    | ProductFormFragment_ConfigurableProduct_Fragment
+    | ProductFormFragment_DownloadableProduct_Fragment
+    | ProductFormFragment_GiftCardProduct_Fragment
+    | ProductFormFragment_GroupedProduct_Fragment
+    | ProductFormFragment_SimpleProduct_Fragment
+    | ProductFormFragment_VirtualProduct_Fragment;
+
+export type GetParentSkuBySkuQueryVariables = Exact<{
+    sku?: InputMaybe<Scalars['String']>;
+}>;
+
+export type GetParentSkuBySkuQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -35359,11 +34758,11 @@ export type GetParentSkuQuery = {
     } | null;
 };
 
-export type GetproductQueryVariables = Exact<{
+export type GetProductDetailForQuickOrderBySkuQueryVariables = Exact<{
     sku: Scalars['String'];
 }>;
 
-export type GetproductQuery = {
+export type GetProductDetailForQuickOrderBySkuQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -38485,11 +37884,11 @@ export type UpdateQuoteMutation = {
     } | null;
 };
 
-export type GetProductsForQuoteQueryVariables = Exact<{
+export type GetProductsDetailsForQuoteBySearchQueryVariables = Exact<{
     search?: InputMaybe<Scalars['String']>;
 }>;
 
-export type GetProductsForQuoteQuery = {
+export type GetProductsDetailsForQuoteBySearchQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -38658,13 +38057,6 @@ export type GetProductsForQuoteQuery = {
             | null
         > | null;
     } | null;
-};
-
-export type GetCustomerForQuoteQueryVariables = Exact<{ [key: string]: never }>;
-
-export type GetCustomerForQuoteQuery = {
-    __typename?: 'Query';
-    customer?: { __typename?: 'Customer'; mp_quote_id?: number | null } | null;
 };
 
 export type GetCategoryQueryVariables = Exact<{
@@ -39109,11 +38501,11 @@ export type GetFilterInputsQuery = {
     } | null;
 };
 
-export type GetCategoryAvailableSortMethodsQueryVariables = Exact<{
+export type GetAvailableSortMethodsByCategoryQueryVariables = Exact<{
     categoryIdFilter: FilterEqualTypeInput;
 }>;
 
-export type GetCategoryAvailableSortMethodsQuery = {
+export type GetAvailableSortMethodsByCategoryQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -39224,11 +38616,11 @@ export type GetCategoryDataQuery = {
     } | null;
 };
 
-export type GetProductFiltersByCategoryQueryVariables = Exact<{
+export type GetProductAggregationsFilteredByCategoryQueryVariables = Exact<{
     categoryIdFilter: FilterEqualTypeInput;
 }>;
 
-export type GetProductFiltersByCategoryQuery = {
+export type GetProductAggregationsFilteredByCategoryQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -39244,6 +38636,76 @@ export type GetProductFiltersByCategoryQuery = {
                 value: string;
             } | null> | null;
         } | null> | null;
+    } | null;
+};
+
+export type GetProductItemsFilteredByCategoryQueryVariables = Exact<{
+    categoryIdFilter: FilterEqualTypeInput;
+}>;
+
+export type GetProductItemsFilteredByCategoryQuery = {
+    __typename?: 'Query';
+    products?: {
+        __typename?: 'Products';
+        items?: Array<
+            | {
+                  __typename: 'BundleProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | {
+                  __typename: 'ConfigurableProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | {
+                  __typename: 'DownloadableProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | {
+                  __typename: 'GiftCardProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | {
+                  __typename: 'GroupedProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | {
+                  __typename: 'SimpleProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | {
+                  __typename: 'VirtualProduct';
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+              }
+            | null
+        > | null;
     } | null;
 };
 
@@ -39662,11 +39124,11 @@ export type ProductsFragmentFragment = {
     } | null;
 };
 
-export type GetProductDetailForProductPageProductQueryVariables = Exact<{
+export type GetProductDetailForProductPageByUrlKeyQueryVariables = Exact<{
     urlKey: Scalars['String'];
 }>;
 
-export type GetProductDetailForProductPageProductQuery = {
+export type GetProductDetailForProductPageByUrlKeyQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -41932,6 +41394,104 @@ export type ProductDetailsFragmentFragment =
     | ProductDetailsFragment_SimpleProduct_Fragment
     | ProductDetailsFragment_VirtualProduct_Fragment;
 
+export type DeleteSavedCartsMutationVariables = Exact<{
+    token: Scalars['String'];
+}>;
+
+export type DeleteSavedCartsMutation = {
+    __typename?: 'Mutation';
+    mpSaveCartDeleteCart?: boolean | null;
+};
+
+export type GetConfigDetailsForSavedCartsQueryVariables = Exact<{
+    [key: string]: never;
+}>;
+
+export type GetConfigDetailsForSavedCartsQuery = {
+    __typename?: 'Query';
+    mpSaveCartConfigs?: {
+        __typename?: 'MpSaveCartConfigsOutput';
+        enabled?: number | null;
+        button_title?: string | null;
+        allow_share?: number | null;
+        show_button_guest?: number | null;
+    } | null;
+};
+
+export type GetSavedCartsQueryVariables = Exact<{
+    pageSize?: InputMaybe<Scalars['Int']>;
+    currentPage?: InputMaybe<Scalars['Int']>;
+}>;
+
+export type GetSavedCartsQuery = {
+    __typename?: 'Query';
+    mpSaveCartGetCarts?: {
+        __typename?: 'MpGetCartsOutput';
+        total_count?: number | null;
+        page_info?: {
+            __typename?: 'SearchResultPageInfo';
+            current_page?: number | null;
+            page_size?: number | null;
+        } | null;
+        items?: Array<{
+            __typename?: 'MpCartsOutput';
+            cart_id?: number | null;
+            created_at?: string | null;
+            cart_name?: string | null;
+            description?: string | null;
+            share_url?: string | null;
+            token?: string | null;
+            cart_total?: {
+                __typename?: 'Money';
+                currency?: CurrencyEnum | null;
+                value?: number | null;
+            } | null;
+            items?: Array<{
+                __typename?: 'CartItemsOutput';
+                cart_id?: string | null;
+                cart_item_id?: number | null;
+                product_name?: string | null;
+                image?: string | null;
+                price?: string | null;
+                qty?: number | null;
+                sku?: string | null;
+                subtotal_converted?: string | null;
+            } | null> | null;
+        } | null> | null;
+    } | null;
+};
+
+export type RestoreSavedCartsMutationVariables = Exact<{
+    cartId: Scalars['String'];
+    token: Scalars['String'];
+}>;
+
+export type RestoreSavedCartsMutation = {
+    __typename?: 'Mutation';
+    mpSaveCartRestoreCart?: boolean | null;
+};
+
+export type SaveSavedCartsMutationVariables = Exact<{
+    cartId: Scalars['String'];
+    cartName: Scalars['String'];
+    description?: InputMaybe<Scalars['String']>;
+}>;
+
+export type SaveSavedCartsMutation = {
+    __typename?: 'Mutation';
+    o_mpSaveCart?: boolean | null;
+};
+
+export type ShareSavedCartsMutationVariables = Exact<{
+    cartId: Scalars['String'];
+    token: Scalars['String'];
+}>;
+
+export type ShareSavedCartsMutation = {
+    __typename?: 'Mutation';
+    mpSaveCartShareCart?: boolean | null;
+};
+
 export type DeleteCreditCardPaymentMutationVariables = Exact<{
     paymentHash: Scalars['String'];
 }>;
@@ -41978,6 +41538,408 @@ export type GetSavedPaymentsQuery = {
     } | null;
 };
 
+export type GetAutocompleteResultsQueryVariables = Exact<{
+    inputText: Scalars['String'];
+}>;
+
+export type GetAutocompleteResultsQuery = {
+    __typename?: 'Query';
+    products?: {
+        __typename?: 'Products';
+        total_count?: number | null;
+        aggregations?: Array<{
+            __typename?: 'Aggregation';
+            label?: string | null;
+            count?: number | null;
+            attribute_code: string;
+            position?: number | null;
+            options?: Array<{
+                __typename?: 'AggregationOption';
+                label?: string | null;
+                value: string;
+            } | null> | null;
+        } | null> | null;
+        items?: Array<
+            | {
+                  __typename: 'BundleProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | {
+                  __typename: 'ConfigurableProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | {
+                  __typename: 'DownloadableProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | {
+                  __typename: 'GiftCardProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | {
+                  __typename: 'GroupedProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | {
+                  __typename: 'SimpleProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | {
+                  __typename: 'VirtualProduct';
+                  orParentSku?: string | null;
+                  orParentUrlKey?: string | null;
+                  id?: number | null;
+                  uid: string;
+                  name?: string | null;
+                  sku?: string | null;
+                  url_key?: string | null;
+                  url_suffix?: string | null;
+                  small_image?: {
+                      __typename?: 'ProductImage';
+                      url?: string | null;
+                  } | null;
+                  price?: {
+                      __typename?: 'ProductPrices';
+                      regularPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              value?: number | null;
+                              currency?: CurrencyEnum | null;
+                          } | null;
+                      } | null;
+                      minimalPrice?: {
+                          __typename?: 'Price';
+                          amount?: {
+                              __typename?: 'Money';
+                              currency?: CurrencyEnum | null;
+                              value?: number | null;
+                          } | null;
+                      } | null;
+                  } | null;
+                  custom_attributes: Array<{
+                      __typename?: 'CustomAttribute';
+                      entered_attribute_value?: {
+                          __typename?: 'EnteredAttributeValue';
+                          value?: string | null;
+                      } | null;
+                      attribute_metadata?: {
+                          __typename: 'ProductAttributeMetadata';
+                          label?: string | null;
+                      } | null;
+                      selected_attribute_options?: {
+                          __typename: 'SelectedAttributeOption';
+                          attribute_option?: Array<{
+                              __typename?: 'AttributeOption';
+                              label?: string | null;
+                              is_default?: boolean | null;
+                          } | null> | null;
+                      } | null;
+                  } | null>;
+              }
+            | null
+        > | null;
+        page_info?: {
+            __typename?: 'SearchResultPageInfo';
+            total_pages?: number | null;
+        } | null;
+    } | null;
+};
+
 export type GetProductFiltersBySearchQueryVariables = Exact<{
     search: Scalars['String'];
 }>;
@@ -42001,7 +41963,7 @@ export type GetProductFiltersBySearchQuery = {
     } | null;
 };
 
-export type ProductSearchQueryVariables = Exact<{
+export type GetProductsDetailsBySearchQueryVariables = Exact<{
     currentPage?: InputMaybe<Scalars['Int']>;
     inputText: Scalars['String'];
     pageSize?: InputMaybe<Scalars['Int']>;
@@ -42009,7 +41971,7 @@ export type ProductSearchQueryVariables = Exact<{
     sort?: InputMaybe<ProductAttributeSortInput>;
 }>;
 
-export type ProductSearchQuery = {
+export type GetProductsDetailsBySearchQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -42510,11 +42472,11 @@ export type ProductSearchQuery = {
     } | null;
 };
 
-export type GetSearchAvailableSortMethodsQueryVariables = Exact<{
+export type GetAvailableSortMethodsBySearchQueryVariables = Exact<{
     search: Scalars['String'];
 }>;
 
-export type GetSearchAvailableSortMethodsQuery = {
+export type GetAvailableSortMethodsBySearchQuery = {
     __typename?: 'Query';
     products?: {
         __typename?: 'Products';
@@ -42526,21 +42488,6 @@ export type GetSearchAvailableSortMethodsQuery = {
                 value?: string | null;
             } | null> | null;
         } | null;
-    } | null;
-};
-
-export type GetCustomerAfterSignInQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetCustomerAfterSignInQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        email?: string | null;
-        firstname?: string | null;
-        lastname?: string | null;
-        is_subscribed?: boolean | null;
     } | null;
 };
 
@@ -42589,45 +42536,6 @@ export type GetStoreConfigQuery = {
     } | null;
 };
 
-export type AddProductToWishlistFromGalleryMutationVariables = Exact<{
-    wishlistId: Scalars['ID'];
-    itemOptions: WishlistItemInput;
-}>;
-
-export type AddProductToWishlistFromGalleryMutation = {
-    __typename?: 'Mutation';
-    addProductsToWishlist?: {
-        __typename?: 'AddProductsToWishlistOutput';
-        user_errors: Array<{
-            __typename?: 'WishListUserInputError';
-            code: WishListUserInputErrorType;
-            message: string;
-        } | null>;
-    } | null;
-};
-
-export type GetProductsInWishlistsForGalleryQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetProductsInWishlistsForGalleryQuery = {
-    __typename?: 'Query';
-    customerWishlistProducts: Array<string>;
-};
-
-export type CreateWishlistFormMutationVariables = Exact<{
-    name: Scalars['String'];
-    visibility: WishlistVisibilityEnum;
-}>;
-
-export type CreateWishlistFormMutation = {
-    __typename?: 'Mutation';
-    createWishlist?: {
-        __typename?: 'CreateWishlistOutput';
-        wishlist: { __typename?: 'Wishlist'; id?: string | null };
-    } | null;
-};
-
 export type AddProductToWishlistMutationVariables = Exact<{
     wishlistId: Scalars['ID'];
     itemOptions: WishlistItemInput;
@@ -42642,35 +42550,14 @@ export type AddProductToWishlistMutation = {
             code: WishListUserInputErrorType;
             message: string;
         } | null>;
-        wishlist: {
-            __typename?: 'Wishlist';
-            id?: string | null;
-            name?: string | null;
-        };
     } | null;
 };
 
-export type GetWishlistsDialogDataQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetWishlistsDialogDataQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        wishlists: Array<{
-            __typename?: 'Wishlist';
-            id?: string | null;
-            name?: string | null;
-        } | null>;
-    } | null;
-};
-
-export type CreateWishlistPageMutationVariables = Exact<{
+export type CreateWishlistMutationVariables = Exact<{
     input: CreateWishlistInput;
 }>;
 
-export type CreateWishlistPageMutation = {
+export type CreateWishlistMutation = {
     __typename?: 'Mutation';
     createWishlist?: {
         __typename?: 'CreateWishlistOutput';
@@ -42678,29 +42565,21 @@ export type CreateWishlistPageMutation = {
     } | null;
 };
 
-export type GetCustomerWishlistQueryVariables = Exact<{ [key: string]: never }>;
+export type GetProductsInWishlistsQueryVariables = Exact<{
+    [key: string]: never;
+}>;
 
-export type GetCustomerWishlistQuery = {
+export type GetProductsInWishlistsQuery = {
     __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        wishlists: Array<{
-            __typename?: 'Wishlist';
-            id?: string | null;
-            items_count?: number | null;
-            sharing_code?: string | null;
-            name?: string | null;
-            visibility: WishlistVisibilityEnum;
-        } | null>;
-    } | null;
+    customerWishlistProducts: Array<string>;
 };
 
-export type GetCustomerWishlistQueryVariables = Exact<{
+export type GetWishlistProductsQueryVariables = Exact<{
     id: Scalars['ID'];
     currentPage?: InputMaybe<Scalars['Int']>;
 }>;
 
-export type GetCustomerWishlistQuery = {
+export type GetWishlistProductsQuery = {
     __typename?: 'Query';
     customer?: {
         __typename?: 'Customer';
@@ -45619,6 +45498,43 @@ export type GetCustomerWishlistQuery = {
                 >;
             } | null;
         } | null;
+    } | null;
+};
+
+export type GetWishlistsQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetWishlistsQuery = {
+    __typename?: 'Query';
+    customer?: {
+        __typename?: 'Customer';
+        wishlists: Array<{
+            __typename?: 'Wishlist';
+            id?: string | null;
+            items_count?: number | null;
+            sharing_code?: string | null;
+            name?: string | null;
+            visibility: WishlistVisibilityEnum;
+        } | null>;
+    } | null;
+};
+
+export type RemoveProductsFromWishlistMutationVariables = Exact<{
+    wishlistId: Scalars['ID'];
+    wishlistItemsId: Array<Scalars['ID']> | Scalars['ID'];
+}>;
+
+export type RemoveProductsFromWishlistMutation = {
+    __typename?: 'Mutation';
+    removeProductsFromWishlist?: {
+        __typename?: 'RemoveProductsFromWishlistOutput';
+        wishlist: {
+            __typename?: 'Wishlist';
+            id?: string | null;
+            items_count?: number | null;
+            sharing_code?: string | null;
+            name?: string | null;
+            visibility: WishlistVisibilityEnum;
+        };
     } | null;
 };
 
@@ -48567,768 +48483,6 @@ export type WishlistFragmentFragment = {
     } | null;
 };
 
-export type AddWishlistItemToCartMutationVariables = Exact<{
-    cartId: Scalars['String'];
-    cartItem: CartItemInput;
-}>;
-
-export type AddWishlistItemToCartMutation = {
-    __typename?: 'Mutation';
-    addProductsToCart?: {
-        __typename?: 'AddProductsToCartOutput';
-        cart: {
-            __typename?: 'Cart';
-            id: string;
-            total_quantity: number;
-            prices?: {
-                __typename?: 'CartPrices';
-                subtotal_excluding_tax?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-                subtotal_including_tax?: {
-                    __typename?: 'Money';
-                    currency?: CurrencyEnum | null;
-                    value?: number | null;
-                } | null;
-            } | null;
-            items?: Array<
-                | {
-                      __typename?: 'BundleCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'ConfigurableCartItem';
-                      uid: string;
-                      quantity: number;
-                      configurable_options: Array<{
-                          __typename?: 'SelectedConfigurableOption';
-                          configurable_product_option_uid: string;
-                          option_label: string;
-                          configurable_product_option_value_uid: string;
-                          value_label: string;
-                      } | null>;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'DownloadableCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'GiftCardCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'SimpleCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | {
-                      __typename?: 'VirtualCartItem';
-                      uid: string;
-                      quantity: number;
-                      product:
-                          | {
-                                __typename?: 'BundleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'ConfigurableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                variants?: Array<{
-                                    __typename?: 'ConfigurableVariant';
-                                    attributes?: Array<{
-                                        __typename?: 'ConfigurableAttributeOption';
-                                        uid: string;
-                                    } | null> | null;
-                                    product?: {
-                                        __typename?: 'SimpleProduct';
-                                        uid: string;
-                                        thumbnail?: {
-                                            __typename?: 'ProductImage';
-                                            url?: string | null;
-                                        } | null;
-                                    } | null;
-                                } | null> | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'DownloadableProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GiftCardProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'GroupedProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'SimpleProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            }
-                          | {
-                                __typename?: 'VirtualProduct';
-                                uid: string;
-                                name?: string | null;
-                                sku?: string | null;
-                                url_key?: string | null;
-                                stock_status?: ProductStockStatus | null;
-                                thumbnail?: {
-                                    __typename?: 'ProductImage';
-                                    url?: string | null;
-                                } | null;
-                            };
-                      prices?: {
-                          __typename?: 'CartItemPrices';
-                          price: {
-                              __typename?: 'Money';
-                              currency?: CurrencyEnum | null;
-                              value?: number | null;
-                          };
-                          total_item_discount?: {
-                              __typename?: 'Money';
-                              value?: number | null;
-                          } | null;
-                      } | null;
-                  }
-                | null
-            > | null;
-        };
-    } | null;
-};
-
-export type RemoveProductsFromWishlistMutationVariables = Exact<{
-    wishlistId: Scalars['ID'];
-    wishlistItemsId: Array<Scalars['ID']> | Scalars['ID'];
-}>;
-
-export type RemoveProductsFromWishlistMutation = {
-    __typename?: 'Mutation';
-    removeProductsFromWishlist?: {
-        __typename?: 'RemoveProductsFromWishlistOutput';
-        wishlist: {
-            __typename?: 'Wishlist';
-            id?: string | null;
-            items_count?: number | null;
-            sharing_code?: string | null;
-            name?: string | null;
-            visibility: WishlistVisibilityEnum;
-        };
-    } | null;
-};
-
 type WishlistItemFragment_BundleWishlistItem_Fragment = {
     __typename?: 'BundleWishlistItem';
     id: string;
@@ -52249,187 +51403,6 @@ export type WishlistItemFragmentFragment =
     | WishlistItemFragment_GroupedProductWishlistItem_Fragment
     | WishlistItemFragment_SimpleWishlistItem_Fragment
     | WishlistItemFragment_VirtualWishlistItem_Fragment;
-
-export type AccountChipQueryQueryVariables = Exact<{ [key: string]: never }>;
-
-export type AccountChipQueryQuery = {
-    __typename?: 'Query';
-    customer?: { __typename?: 'Customer'; firstname?: string | null } | null;
-};
-
-export type SetCustomerInformationMutationVariables = Exact<{
-    customerInput: CustomerInput;
-}>;
-
-export type SetCustomerInformationMutation = {
-    __typename?: 'Mutation';
-    updateCustomer?: {
-        __typename?: 'CustomerOutput';
-        customer: {
-            __typename?: 'Customer';
-            id?: number | null;
-            firstname?: string | null;
-            email?: string | null;
-            taxvat?: string | null;
-        };
-    } | null;
-};
-
-export type ChangeCustomerPasswordMutationVariables = Exact<{
-    currentPassword: Scalars['String'];
-    newPassword: Scalars['String'];
-}>;
-
-export type ChangeCustomerPasswordMutation = {
-    __typename?: 'Mutation';
-    changeCustomerPassword?: {
-        __typename?: 'Customer';
-        email?: string | null;
-    } | null;
-};
-
-export type GetCustomerInformationQueryVariables = Exact<{
-    [key: string]: never;
-}>;
-
-export type GetCustomerInformationQuery = {
-    __typename?: 'Query';
-    customer?: {
-        __typename?: 'Customer';
-        id?: number | null;
-        firstname?: string | null;
-        email?: string | null;
-        taxvat?: string | null;
-    } | null;
-};
-
-export type AccountInformationPageFragmentFragment = {
-    __typename?: 'Customer';
-    id?: number | null;
-    firstname?: string | null;
-    email?: string | null;
-    taxvat?: string | null;
-};
-
-export type RequestPasswordResetEmailMutationVariables = Exact<{
-    email: Scalars['String'];
-}>;
-
-export type RequestPasswordResetEmailMutation = {
-    __typename?: 'Mutation';
-    requestPasswordResetEmail?: boolean | null;
-};
-
-type EditFormFragment_BundleProduct_Fragment = {
-    __typename: 'BundleProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-};
-
-type EditFormFragment_ConfigurableProduct_Fragment = {
-    __typename: 'ConfigurableProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-    configurable_options?: Array<{
-        __typename?: 'ConfigurableProductOptions';
-        attribute_code?: string | null;
-        attribute_id?: string | null;
-        uid: string;
-        label?: string | null;
-        values?: Array<{
-            __typename?: 'ConfigurableProductOptionsValues';
-            default_label?: string | null;
-            label?: string | null;
-            store_label?: string | null;
-            use_default_value?: boolean | null;
-            value_index?: number | null;
-            swatch_data?:
-                | { __typename?: 'ColorSwatchData'; value?: string | null }
-                | {
-                      __typename?: 'ImageSwatchData';
-                      thumbnail?: string | null;
-                      value?: string | null;
-                  }
-                | { __typename?: 'TextSwatchData'; value?: string | null }
-                | null;
-        } | null> | null;
-    } | null> | null;
-    variants?: Array<{
-        __typename?: 'ConfigurableVariant';
-        attributes?: Array<{
-            __typename?: 'ConfigurableAttributeOption';
-            code?: string | null;
-            value_index?: number | null;
-        } | null> | null;
-        product?: {
-            __typename?: 'SimpleProduct';
-            uid: string;
-            sku?: string | null;
-            stock_status?: ProductStockStatus | null;
-            media_gallery_entries?: Array<{
-                __typename?: 'MediaGalleryEntry';
-                id?: number | null;
-                disabled?: boolean | null;
-                file?: string | null;
-                label?: string | null;
-                position?: number | null;
-            } | null> | null;
-        } | null;
-    } | null> | null;
-};
-
-type EditFormFragment_DownloadableProduct_Fragment = {
-    __typename: 'DownloadableProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-};
-
-type EditFormFragment_GiftCardProduct_Fragment = {
-    __typename: 'GiftCardProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-};
-
-type EditFormFragment_GroupedProduct_Fragment = {
-    __typename: 'GroupedProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-};
-
-type EditFormFragment_SimpleProduct_Fragment = {
-    __typename: 'SimpleProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-};
-
-type EditFormFragment_VirtualProduct_Fragment = {
-    __typename: 'VirtualProduct';
-    uid: string;
-    name?: string | null;
-    sku?: string | null;
-    url_key?: string | null;
-};
-
-export type EditFormFragmentFragment =
-    | EditFormFragment_BundleProduct_Fragment
-    | EditFormFragment_ConfigurableProduct_Fragment
-    | EditFormFragment_DownloadableProduct_Fragment
-    | EditFormFragment_GiftCardProduct_Fragment
-    | EditFormFragment_GroupedProduct_Fragment
-    | EditFormFragment_SimpleProduct_Fragment
-    | EditFormFragment_VirtualProduct_Fragment;
 
 export type GetMiniCartQueryQueryVariables = Exact<{
     cartId: Scalars['String'];
