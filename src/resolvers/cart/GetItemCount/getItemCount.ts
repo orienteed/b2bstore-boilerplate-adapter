@@ -1,0 +1,10 @@
+import { GetItemCountQueryVariables } from "@schema";
+
+const GetItemCount = (props: { GetItemCountQueryVariables }) => {
+    // Look docs for more info about how to fill this function
+
+    return { data: {}, loading: false, error: undefined };
+};
+
+export default GetItemCount;
+        
