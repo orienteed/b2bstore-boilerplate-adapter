@@ -1,6 +1,6 @@
 import { RequestPasswordResetEmailMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): RequestPasswordResetEmailMutation => {
+export const requestPasswordResetEmailParser = (data: any): RequestPasswordResetEmailMutation => {
     // Your parser logic here
     return data;
 };

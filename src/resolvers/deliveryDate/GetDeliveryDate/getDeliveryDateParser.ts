@@ -1,6 +1,6 @@
 import { GetDeliveryDateQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetDeliveryDateQuery => {
+export const getDeliveryDateParser = (data: any): GetDeliveryDateQuery => {
     // Your parser logic here
     return data;
 };

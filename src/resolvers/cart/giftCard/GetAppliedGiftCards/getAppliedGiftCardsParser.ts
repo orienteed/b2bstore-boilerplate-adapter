@@ -1,6 +1,6 @@
 import { GetAppliedGiftCardsQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetAppliedGiftCardsQuery => {
+export const getAppliedGiftCardsParser = (data: any): GetAppliedGiftCardsQuery => {
     // Your parser logic here
     return data;
 };

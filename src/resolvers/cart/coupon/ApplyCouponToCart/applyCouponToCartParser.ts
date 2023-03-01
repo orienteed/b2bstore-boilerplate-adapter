@@ -1,6 +1,6 @@
 import { ApplyCouponToCartMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): ApplyCouponToCartMutation => {
+export const applyCouponToCartParser = (data: any): ApplyCouponToCartMutation => {
     // Your parser logic here
     return data;
 };

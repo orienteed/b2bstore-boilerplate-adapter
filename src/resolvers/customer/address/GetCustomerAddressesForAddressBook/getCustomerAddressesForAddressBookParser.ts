@@ -1,6 +1,6 @@
 import { GetCustomerAddressesForAddressBookQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetCustomerAddressesForAddressBookQuery => {
+export const getCustomerAddressesForAddressBookParser = (data: any): GetCustomerAddressesForAddressBookQuery => {
     // Your parser logic here
     return data;
 };

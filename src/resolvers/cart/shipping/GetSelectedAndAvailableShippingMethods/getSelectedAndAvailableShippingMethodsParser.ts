@@ -1,6 +1,6 @@
 import { GetSelectedAndAvailableShippingMethodsQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetSelectedAndAvailableShippingMethodsQuery => {
+export const getSelectedAndAvailableShippingMethodsParser = (data: any): GetSelectedAndAvailableShippingMethodsQuery => {
     // Your parser logic here
     return data;
 };

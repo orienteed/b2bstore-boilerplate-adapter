@@ -1,6 +1,6 @@
 import { GetQuoteByIdQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetQuoteByIdQuery => {
+export const getQuoteByIdParser = (data: any): GetQuoteByIdQuery => {
     // Your parser logic here
     return data;
 };

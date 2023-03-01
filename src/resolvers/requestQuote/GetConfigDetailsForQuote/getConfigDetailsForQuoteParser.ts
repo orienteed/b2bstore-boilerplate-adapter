@@ -1,6 +1,6 @@
 import { GetConfigDetailsForQuoteQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetConfigDetailsForQuoteQuery => {
+export const getConfigDetailsForQuoteParser = (data: any): GetConfigDetailsForQuoteQuery => {
     // Your parser logic here
     return data;
 };

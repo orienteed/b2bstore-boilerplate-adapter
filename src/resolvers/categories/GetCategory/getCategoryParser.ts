@@ -1,6 +1,6 @@
 import { GetCategoryQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetCategoryQuery => {
+export const getCategoryParser = (data: any): GetCategoryQuery => {
     // Your parser logic here
     return data;
 };

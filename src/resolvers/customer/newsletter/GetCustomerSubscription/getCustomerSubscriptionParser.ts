@@ -1,6 +1,6 @@
 import { SetNewsletterSubscriptionMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): SetNewsletterSubscriptionMutation => {
+export const getCustomerSubscriptionParser = (data: any): SetNewsletterSubscriptionMutation => {
     // Your parser logic here
     return data;
 };

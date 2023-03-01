@@ -1,6 +1,6 @@
 import { SetBillingAddressMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): SetBillingAddressMutation => {
+export const setBillingAddressParser = (data: any): SetBillingAddressMutation => {
     // Your parser logic here
     return data;
 };

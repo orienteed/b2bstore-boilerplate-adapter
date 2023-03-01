@@ -1,6 +1,6 @@
 import { GetIsBillingAddressSameQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetIsBillingAddressSameQuery => {
+export const getIsBillingAddressSameParser = (data: any): GetIsBillingAddressSameQuery => {
     // Your parser logic here
     return data;
 };

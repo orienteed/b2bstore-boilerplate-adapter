@@ -1,6 +1,6 @@
 import { UpdateCartItemsMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): UpdateCartItemsMutation => {
+export const updateCartItemsParser = (data: any): UpdateCartItemsMutation => {
     // Your parser logic here
     return data;
 };

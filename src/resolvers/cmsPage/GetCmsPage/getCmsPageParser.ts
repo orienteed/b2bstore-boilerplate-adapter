@@ -1,6 +1,6 @@
 import { GetCmsPageQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetCmsPageQuery => {
+export const getCmsPageParser = (data: any): GetCmsPageQuery => {
     // Your parser logic here
     return data;
 };

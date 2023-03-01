@@ -1,6 +1,6 @@
 import { GetAppliedCouponsQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetAppliedCouponsQuery => {
+export const getAppliedCouponsParser = (data: any): GetAppliedCouponsQuery => {
     // Your parser logic here
     return data;
 };

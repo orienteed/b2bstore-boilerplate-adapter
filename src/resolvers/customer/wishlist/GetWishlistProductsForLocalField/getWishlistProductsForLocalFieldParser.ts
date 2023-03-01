@@ -1,6 +1,6 @@
 import { GetWishlistProductsForLocalFieldQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetWishlistProductsForLocalFieldQuery => {
+export const getWishlistProductsForLocalFieldParser = (data: any): GetWishlistProductsForLocalFieldQuery => {
     // Your parser logic here
     return data;
 };

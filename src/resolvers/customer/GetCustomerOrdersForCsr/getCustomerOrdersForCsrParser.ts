@@ -1,6 +1,6 @@
 import { GetCustomerOrdersForCsrQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetCustomerOrdersForCsrQuery => {
+export const getCustomerOrdersForCsrParser = (data: any): GetCustomerOrdersForCsrQuery => {
     // Your parser logic here
     return data;
 };

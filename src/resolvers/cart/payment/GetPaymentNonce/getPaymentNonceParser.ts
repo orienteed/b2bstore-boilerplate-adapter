@@ -1,6 +1,6 @@
 import { GetPaymentNonceQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetPaymentNonceQuery => {
+export const getPaymentNonceParser = (data: any): GetPaymentNonceQuery => {
     // Your parser logic here
     return data;
 };

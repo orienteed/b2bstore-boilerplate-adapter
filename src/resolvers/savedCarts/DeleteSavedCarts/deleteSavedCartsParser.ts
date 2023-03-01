@@ -1,6 +1,6 @@
 import { DeleteSavedCartsMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): DeleteSavedCartsMutation => {
+export const deleteSavedCartsParser = (data: any): DeleteSavedCartsMutation => {
     // Your parser logic here
     return data;
 };

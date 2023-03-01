@@ -1,6 +1,6 @@
 import { GetProductsForPagebuilderByUrlKeyQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetProductsForPagebuilderByUrlKeyQuery => {
+export const getProductsForPagebuilderByUrlKeyParser = (data: any): GetProductsForPagebuilderByUrlKeyQuery => {
     // Your parser logic here
     return data;
 };

@@ -1,6 +1,6 @@
 import { RemoveProductsFromWishlistMutation } from '@schema';
 
-export const addItemToCartParser = (data: any): RemoveProductsFromWishlistMutation => {
+export const removeProductsFromWishlistParser = (data: any): RemoveProductsFromWishlistMutation => {
     // Your parser logic here
     return data;
 };

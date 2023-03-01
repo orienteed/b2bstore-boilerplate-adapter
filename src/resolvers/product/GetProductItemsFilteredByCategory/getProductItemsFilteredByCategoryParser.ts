@@ -1,6 +1,6 @@
 import { GetProductItemsFilteredByCategoryQuery } from '@schema';
 
-export const addItemToCartParser = (data: any): GetProductItemsFilteredByCategoryQuery => {
+export const getProductItemsFilteredByCategoryParser = (data: any): GetProductItemsFilteredByCategoryQuery => {
     // Your parser logic here
     return data;
 };
