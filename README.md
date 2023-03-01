@@ -8,12 +8,12 @@
 
 #### Table of Contents
 
-- [📢 What is B2BStore Boilerplate Adapter?](#-what-is-b2bstore-boilerplate-adapter)
-- [⭐ Features](#-features)
-- [💻 Usage in B2BStore](#-usage-in-b2bstore)
-- [📖 Publish to _npmjs.com_](#-publish-to-npmjscom)
-- [📅 Update your adapter](#-update-your-adapter)
-- [🙌🏼 How to contribute](#-how-to-contribute)
+-   [📢 What is B2BStore Boilerplate Adapter?](#-what-is-b2bstore-boilerplate-adapter)
+-   [⭐ Features](#-features)
+-   [💻 Usage in B2BStore](#-usage-in-b2bstore)
+-   [📖 Publish to _npmjs.com_](#-publish-to-npmjscom)
+-   [📅 Update your adapter](#-update-your-adapter)
+-   [🙌🏼 How to contribute](#-how-to-contribute)
 
 </br>
 
@@ -82,13 +82,13 @@ git checkout develop
 Once you are on the _"develop"_ branch, you can start using the adapter by calling it with the `package.json` name indicated. For example, in your code, you can import the library using the following syntax:
 
 ```javascript
-import * as boilerplate from "@b2bstore/boilerplate-adapter";
+import * as boilerplate from '@b2bstore/boilerplate-adapter';
 ```
 
 You can also import specific modules or classes from the library like this:
 
 ```javascript
-import { getProducts } from "@b2bstore/boilerplate-adapter";
+import { getProducts } from '@b2bstore/boilerplate-adapter';
 ```
 
 </br>
@@ -187,9 +187,9 @@ By staying up-to-date with these changes, you can ensure that your adapter remai
 
 To contribute to this project, you can do it in the following ways:
 
-- Reporting bugs.
-- Suggesting enhancements.
-- Opening pull requests.
+-   Reporting bugs.
+-   Suggesting enhancements.
+-   Opening pull requests.
 
 If you want to know more, please <a href="https://b2bstore.io/en/contactus/" target="_blank">contact us</a>
 

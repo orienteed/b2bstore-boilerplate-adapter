@@ -14,11 +14,11 @@ The fragment file needs to export a `gql` template literal with the fragment def
 
 ```js
 export const User = gql`
-  fragment User on User {
-    id
-    name
-    email
-  }
+    fragment User on User {
+        id
+        name
+        email
+    }
 `;
 ```
 
@@ -27,14 +27,14 @@ export const User = gql`
 To use a fragment, you need to import it in the query or mutation where you want to use it. For example, if you want to use the `User` fragment in the `User` query, you need to import it in the `User` query.
 
 ```js
-import { User } from "./fragments";
+import { User } from './fragments';
 
 export const User = gql`
-  query User {
-    user {
-      ...User
+    query User {
+        user {
+            ...User
+        }
     }
-  }
-  ${User}
+    ${User}
 `;
 ```

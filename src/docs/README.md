@@ -8,6 +8,6 @@
 
 #### Table of Contents
 
-- [Apollo Queries](/src/docs/apolloQueries)
-- [Fragments](/src/docs/fragments)
-- [Rest Queries](/src/docs/restQueries)
+-   [Apollo Queries](/src/docs/apolloQueries)
+-   [Fragments](/src/docs/fragments)
+-   [Rest Queries](/src/docs/restQueries)
