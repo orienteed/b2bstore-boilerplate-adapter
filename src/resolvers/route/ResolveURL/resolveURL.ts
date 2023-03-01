@@ -1,9 +1,10 @@
-import { ResolveUrlQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { ResolveUrlQueryVariables } from '@schema';
 
-const ResolveURL = (props: { ResolveUrlQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const ResolveURL = (clientProps: ClientProps) => (resolverProps: ResolveUrlQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default ResolveURL;

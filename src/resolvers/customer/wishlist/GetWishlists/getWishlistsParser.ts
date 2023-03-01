@@ -1,6 +1,6 @@
-import { GetWishlistsQuery } from "src/schema";
+import { GetWishlistsQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetWishlistsQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

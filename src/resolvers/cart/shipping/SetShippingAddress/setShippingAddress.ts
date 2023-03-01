@@ -1,9 +1,10 @@
-import { SetShippingAddressMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { SetShippingAddressMutationVariables } from '@schema';
 
-const SetShippingAddress = (props: { SetShippingAddressMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const SetShippingAddress = (clientProps: ClientProps) => (resolverProps: SetShippingAddressMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default SetShippingAddress;

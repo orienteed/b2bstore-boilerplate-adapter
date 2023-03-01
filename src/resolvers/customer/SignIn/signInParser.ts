@@ -1,6 +1,6 @@
-import { SignInMutation } from "src/schema";
+import { SignInMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): SignInMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

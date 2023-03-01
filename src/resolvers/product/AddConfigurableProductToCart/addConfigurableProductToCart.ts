@@ -1,11 +1,10 @@
-import { AddConfigurableProductToCartMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { AddConfigurableProductToCartMutationVariables } from '@schema';
 
-const AddConfigurableProductToCart = (props: {
-  AddConfigurableProductToCartMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const AddConfigurableProductToCart = (clientProps: ClientProps) => (resolverProps: AddConfigurableProductToCartMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default AddConfigurableProductToCart;

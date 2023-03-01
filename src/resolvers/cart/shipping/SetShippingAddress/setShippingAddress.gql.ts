@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const SET_SHIPPING_ADDRESS = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  setShippingAddressMutation: SET_SHIPPING_ADDRESS,
+    setShippingAddressMutation: SET_SHIPPING_ADDRESS
 };

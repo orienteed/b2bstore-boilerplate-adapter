@@ -1,9 +1,10 @@
-import { SetBillingAddressMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { SetBillingAddressMutationVariables } from '@schema';
 
-const SetBillingAddress = (props: { SetBillingAddressMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const SetBillingAddress = (clientProps: ClientProps) => (resolverProps: SetBillingAddressMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default SetBillingAddress;

@@ -1,6 +1,6 @@
-import { GetParentSkuBySkuQuery } from "src/schema";
+import { GetParentSkuBySkuQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetParentSkuBySkuQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

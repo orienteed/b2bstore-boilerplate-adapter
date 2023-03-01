@@ -1,6 +1,6 @@
-import { CreateCompareListMutation } from "src/schema";
+import { CreateCompareListMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): CreateCompareListMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

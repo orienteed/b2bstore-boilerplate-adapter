@@ -1,9 +1,10 @@
-import { GetSalesRulesDataQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetSalesRulesDataQueryVariables } from '@schema';
 
-const GetSalesRulesData = (props: { GetSalesRulesDataQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetSalesRulesData = (clientProps: ClientProps) => (resolverProps: GetSalesRulesDataQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetSalesRulesData;

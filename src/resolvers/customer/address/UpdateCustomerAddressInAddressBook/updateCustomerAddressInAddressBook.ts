@@ -1,11 +1,11 @@
-import { UpdateCustomerAddressInAddressBookMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { UpdateCustomerAddressInAddressBookMutationVariables } from '@schema';
 
-const UpdateCustomerAddressInAddressBook = (props: {
-  UpdateCustomerAddressInAddressBookMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const UpdateCustomerAddressInAddressBook =
+    (clientProps: ClientProps) => (resolverProps: UpdateCustomerAddressInAddressBookMutationVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default UpdateCustomerAddressInAddressBook;

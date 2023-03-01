@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const DELETE_ITEM_FROM_QUOTE = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  deleteItemFromQuoteMutation: DELETE_ITEM_FROM_QUOTE,
+    deleteItemFromQuoteMutation: DELETE_ITEM_FROM_QUOTE
 };

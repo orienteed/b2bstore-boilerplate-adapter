@@ -1,9 +1,10 @@
-import { GetCategoryDataQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetCategoryDataQueryVariables } from '@schema';
 
-const GetCategoryData = (props: { GetCategoryDataQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetCategoryData = (clientProps: ClientProps) => (resolverProps: GetCategoryDataQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetCategoryData;

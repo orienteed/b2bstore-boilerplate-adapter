@@ -1,11 +1,10 @@
-import { GetAutocompleteResultsQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetAutocompleteResultsQueryVariables } from '@schema';
 
-const GetAutocompleteResults = (props: {
-  GetAutocompleteResultsQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetAutocompleteResults = (clientProps: ClientProps) => (resolverProps: GetAutocompleteResultsQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetAutocompleteResults;

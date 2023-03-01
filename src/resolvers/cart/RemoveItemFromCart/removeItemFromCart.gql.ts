@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const REMOVE_ITEM_FROM_CART = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  removeItemFromCartMutation: REMOVE_ITEM_FROM_CART,
+    removeItemFromCartMutation: REMOVE_ITEM_FROM_CART
 };

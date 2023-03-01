@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const GET_CURRENCY_DATA = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  getCurrencyDataQuery: GET_CURRENCY_DATA,
+    getCurrencyDataQuery: GET_CURRENCY_DATA
 };

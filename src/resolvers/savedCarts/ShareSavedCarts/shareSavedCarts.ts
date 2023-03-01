@@ -1,9 +1,10 @@
-import { ShareSavedCartsMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { ShareSavedCartsMutationVariables } from '@schema';
 
-const ShareSavedCarts = (props: { ShareSavedCartsMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const ShareSavedCarts = (clientProps: ClientProps) => (resolverProps: ShareSavedCartsMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default ShareSavedCarts;

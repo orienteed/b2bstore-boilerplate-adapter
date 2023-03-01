@@ -1,6 +1,6 @@
-import { GetBreadcrumbsQuery } from "src/schema";
+import { GetBreadcrumbsQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetBreadcrumbsQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

@@ -1,9 +1,10 @@
-import { GetSavedCartsQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetSavedCartsQueryVariables } from '@schema';
 
-const GetSavedCarts = (props: { GetSavedCartsQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetSavedCarts = (clientProps: ClientProps) => (resolverProps: GetSavedCartsQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetSavedCarts;

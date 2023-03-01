@@ -1,9 +1,10 @@
-import { GetProductListingQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetProductListingQueryVariables } from '@schema';
 
-const GetProductListing = (props: { GetProductListingQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetProductListing = (clientProps: ClientProps) => (resolverProps: GetProductListingQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetProductListing;

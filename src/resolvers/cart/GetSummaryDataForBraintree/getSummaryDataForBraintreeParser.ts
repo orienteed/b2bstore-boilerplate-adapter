@@ -1,8 +1,6 @@
-import { GetSummaryDataForBraintreeQuery } from "src/schema";
+import { GetSummaryDataForBraintreeQuery } from '@schema';
 
-export const addItemToCartParser = (
-  data: any
-): GetSummaryDataForBraintreeQuery => {
-  // Your parser logic here
-  return data;
+export const addItemToCartParser = (data: any): GetSummaryDataForBraintreeQuery => {
+    // Your parser logic here
+    return data;
 };

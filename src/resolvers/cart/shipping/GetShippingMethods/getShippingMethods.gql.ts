@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const GET_SHIPPING_METHODS = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  getShippingMethodsQuery: GET_SHIPPING_METHODS,
+    getShippingMethodsQuery: GET_SHIPPING_METHODS
 };

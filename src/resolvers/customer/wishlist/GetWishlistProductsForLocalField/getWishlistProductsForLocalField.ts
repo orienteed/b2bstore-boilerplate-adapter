@@ -1,11 +1,10 @@
-import { GetWishlistProductsForLocalFieldQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetWishlistProductsForLocalFieldQueryVariables } from '@schema';
 
-const GetWishlistProductsForLocalField = (props: {
-  GetWishlistProductsForLocalFieldQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetWishlistProductsForLocalField = (clientProps: ClientProps) => (resolverProps: GetWishlistProductsForLocalFieldQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetWishlistProductsForLocalField;

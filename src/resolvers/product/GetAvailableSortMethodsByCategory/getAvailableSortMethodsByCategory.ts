@@ -1,11 +1,11 @@
-import { GetAvailableSortMethodsByCategoryQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetAvailableSortMethodsByCategoryQueryVariables } from '@schema';
 
-const GetAvailableSortMethodsByCategory = (props: {
-  GetAvailableSortMethodsByCategoryQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetAvailableSortMethodsByCategory =
+    (clientProps: ClientProps) => (resolverProps: GetAvailableSortMethodsByCategoryQueryVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default GetAvailableSortMethodsByCategory;

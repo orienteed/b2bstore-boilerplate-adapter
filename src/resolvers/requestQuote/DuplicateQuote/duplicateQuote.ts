@@ -1,9 +1,10 @@
-import { DuplicateQuoteMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { DuplicateQuoteMutationVariables } from '@schema';
 
-const DuplicateQuote = (props: { DuplicateQuoteMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const DuplicateQuote = (clientProps: ClientProps) => (resolverProps: DuplicateQuoteMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default DuplicateQuote;

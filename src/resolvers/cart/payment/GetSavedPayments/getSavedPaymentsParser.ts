@@ -1,6 +1,6 @@
-import { GetSavedPaymentsQuery } from "src/schema";
+import { GetSavedPaymentsQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetSavedPaymentsQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

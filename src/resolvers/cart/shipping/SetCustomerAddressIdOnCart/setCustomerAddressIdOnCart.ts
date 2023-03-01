@@ -1,11 +1,10 @@
-import { SetCustomerAddressIdOnCartMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { SetCustomerAddressIdOnCartMutationVariables } from '@schema';
 
-const SetCustomerAddressIdOnCart = (props: {
-  SetCustomerAddressIdOnCartMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const SetCustomerAddressIdOnCart = (clientProps: ClientProps) => (resolverProps: SetCustomerAddressIdOnCartMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default SetCustomerAddressIdOnCart;

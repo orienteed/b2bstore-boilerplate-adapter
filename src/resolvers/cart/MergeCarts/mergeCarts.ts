@@ -1,9 +1,10 @@
-import { MergeCartsMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { MergeCartsMutationVariables } from '@schema';
 
-const MergeCarts = (props: { MergeCartsMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const MergeCarts = (clientProps: ClientProps) => (resolverProps: MergeCartsMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default MergeCarts;

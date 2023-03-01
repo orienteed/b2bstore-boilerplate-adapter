@@ -1,11 +1,11 @@
-import { GetProductDetailForAtcDialogBySkuQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetProductDetailForAtcDialogBySkuQueryVariables } from '@schema';
 
-const GetProductDetailForATCDialogBySku = (props: {
-  GetProductDetailForAtcDialogBySkuQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetProductDetailForATCDialogBySku =
+    (clientProps: ClientProps) => (resolverProps: GetProductDetailForAtcDialogBySkuQueryVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default GetProductDetailForATCDialogBySku;

@@ -1,9 +1,10 @@
-import { GetMiniCartQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetMiniCartQueryVariables } from '@schema';
 
-const GetMiniCart = (props: { GetMiniCartQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetMiniCart = (clientProps: ClientProps) => (resolverProps: GetMiniCartQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetMiniCart;

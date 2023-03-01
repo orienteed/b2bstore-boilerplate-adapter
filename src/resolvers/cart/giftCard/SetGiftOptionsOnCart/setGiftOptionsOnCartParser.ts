@@ -1,8 +1,6 @@
-import { SetGiftOptionsOnCartMutation } from "src/schema";
+import { SetGiftOptionsOnCartMutation } from '@schema';
 
-export const addItemToCartParser = (
-  data: any
-): SetGiftOptionsOnCartMutation => {
-  // Your parser logic here
-  return data;
+export const addItemToCartParser = (data: any): SetGiftOptionsOnCartMutation => {
+    // Your parser logic here
+    return data;
 };

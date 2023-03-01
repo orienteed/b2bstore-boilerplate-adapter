@@ -1,9 +1,10 @@
-import { GetShippingMethodsQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetShippingMethodsQueryVariables } from '@schema';
 
-const GetShippingMethods = (props: { GetShippingMethodsQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetShippingMethods = (clientProps: ClientProps) => (resolverProps: GetShippingMethodsQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetShippingMethods;

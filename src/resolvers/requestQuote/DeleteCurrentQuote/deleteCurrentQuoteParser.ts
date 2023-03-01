@@ -1,6 +1,6 @@
-import { DeleteCurrentQuoteMutation } from "src/schema";
+import { DeleteCurrentQuoteMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): DeleteCurrentQuoteMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

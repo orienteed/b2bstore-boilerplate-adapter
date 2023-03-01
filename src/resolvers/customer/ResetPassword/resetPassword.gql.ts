@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const RESET_PASSWORD = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  resetPasswordMutation: RESET_PASSWORD,
+    resetPasswordMutation: RESET_PASSWORD
 };

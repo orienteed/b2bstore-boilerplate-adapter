@@ -1,9 +1,10 @@
-import { GetRouteDataQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetRouteDataQueryVariables } from '@schema';
 
-const GetRouteData = (props: { GetRouteDataQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetRouteData = (clientProps: ClientProps) => (resolverProps: GetRouteDataQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetRouteData;

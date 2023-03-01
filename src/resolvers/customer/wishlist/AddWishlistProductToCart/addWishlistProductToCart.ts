@@ -1,11 +1,10 @@
-import { AddWishlistProductToCartMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { AddWishlistProductToCartMutationVariables } from '@schema';
 
-const AddWishlistProductToCart = (props: {
-  AddWishlistProductToCartMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const AddWishlistProductToCart = (clientProps: ClientProps) => (resolverProps: AddWishlistProductToCartMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default AddWishlistProductToCart;

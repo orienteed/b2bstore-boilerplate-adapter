@@ -1,6 +1,6 @@
-import { GetCurrencyDataQuery } from "src/schema";
+import { GetCurrencyDataQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetCurrencyDataQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

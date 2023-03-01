@@ -1,9 +1,10 @@
-import { SetShippingMethodMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { SetShippingMethodMutationVariables } from '@schema';
 
-const SetShippingMethod = (props: { SetShippingMethodMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const SetShippingMethod = (clientProps: ClientProps) => (resolverProps: SetShippingMethodMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default SetShippingMethod;

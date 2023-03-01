@@ -1,9 +1,10 @@
-import { GetSummaryDataQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetSummaryDataQueryVariables } from '@schema';
 
-const GetSummaryData = (props: { GetSummaryDataQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetSummaryData = (clientProps: ClientProps) => (resolverProps: GetSummaryDataQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetSummaryData;

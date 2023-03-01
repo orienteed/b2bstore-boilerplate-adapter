@@ -1,6 +1,6 @@
-import { CreateAccountMutation } from "src/schema";
+import { CreateAccountMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): CreateAccountMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

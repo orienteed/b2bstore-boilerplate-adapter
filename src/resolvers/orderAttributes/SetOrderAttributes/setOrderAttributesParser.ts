@@ -1,6 +1,6 @@
-import { SetOrderAttributesMutation } from "src/schema";
+import { SetOrderAttributesMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): SetOrderAttributesMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

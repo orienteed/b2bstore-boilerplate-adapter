@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const GET_ITEM_COUNT = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  getItemCountQuery: GET_ITEM_COUNT,
+    getItemCountQuery: GET_ITEM_COUNT
 };

@@ -1,9 +1,10 @@
-import { SignInMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { SignInMutationVariables } from '@schema';
 
-const SignIn = (props: { SignInMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const SignIn = (clientProps: ClientProps) => (resolverProps: SignInMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default SignIn;

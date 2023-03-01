@@ -1,70 +1,70 @@
 {
-  "name": "@b2bstore/boilerplate-adapter",
-  "type": "module",
-  "version": "0.0.0",
-  "author": "Orienteed SLU",
-  "description": "Boilerplate adapter for B2BStore",
-  "homepage": "https://b2bstore.io",
-  "license": "OSL-3.0",
-  "scripts": {
-    "dev": "vite",
-    "clean": "rimraf dist node_modules tsconfig.tsbuildinfo",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+    "name": "@b2bstore/boilerplate-adapter",
+    "type": "module",
+    "version": "0.0.0",
+    "author": "Orienteed SLU",
+    "description": "Boilerplate adapter for B2BStore",
+    "homepage": "https://b2bstore.io",
+    "license": "OSL-3.0",
+    "scripts": {
+        "dev": "vite",
+        "clean": "rimraf dist node_modules tsconfig.tsbuildinfo",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix"
+        ],
+        "*": [
+            "prettier . --write --ignore-unknown"
+        ]
+    },
+    "dependencies": {
+        "@apollo/client": "^3.7.4",
+        "graphql": "^16.6.0",
+        "react": "^18.2.0"
+    },
+    "peerDependencies": {
+        "@apollo/client": "^3.7.4",
+        "graphql": "^16.6.0",
+        "react": "^18.2.0"
+    },
+    "output": {
+        "globals": {
+            "@apollo/client": "ApolloClient",
+            "graphql": "GraphQL",
+            "react": "React"
+        }
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.27",
+        "@typescript-eslint/eslint-plugin": "^5.48.2",
+        "@typescript-eslint/parser": "^5.48.2",
+        "eslint": "^8.32.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.1",
+        "eslint-plugin-simple-import-sort": "^9.0.0",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.3",
+        "typescript": "^4.9.4",
+        "vite": "^4.0.4",
+        "vite-plugin-dts": "^1.7.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/orienteed/b2bstore-boilerplate-adapter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/orienteed/b2bstore-boilerplate-adapter/issues"
+    },
+    "keywords": [
+        "adapter",
+        "api",
+        "b2bstore",
+        "boilerplate"
     ],
-    "*": [
-      "prettier --write --ignore-unknown"
-    ]
-  },
-  "dependencies": {
-    "@apollo/client": "^3.7.4",
-    "graphql": "^16.6.0",
-    "react": "^18.2.0"
-  },
-  "peerDependencies": {
-    "@apollo/client": "^3.7.4",
-    "graphql": "^16.6.0",
-    "react": "^18.2.0"
-  },
-  "output": {
-    "globals": {
-      "@apollo/client": "ApolloClient",
-      "graphql": "GraphQL",
-      "react": "React"
-    }
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.1",
-    "eslint-plugin-simple-import-sort": "^9.0.0",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.3",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4",
-    "vite-plugin-dts": "^1.7.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/orienteed/b2bstore-boilerplate-adapter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/orienteed/b2bstore-boilerplate-adapter/issues"
-  },
-  "keywords": [
-    "adapter",
-    "api",
-    "b2bstore",
-    "boilerplate"
-  ],
-  "main": "./src/index.ts"
+    "main": "./src/index.ts"
 }

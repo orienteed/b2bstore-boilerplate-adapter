@@ -1,9 +1,10 @@
-import { CreateCompareListMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { CreateCompareListMutationVariables } from '@schema';
 
-const CreateCompareList = (props: { CreateCompareListMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const CreateCompareList = (clientProps: ClientProps) => (resolverProps: CreateCompareListMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default CreateCompareList;

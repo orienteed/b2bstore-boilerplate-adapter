@@ -1,9 +1,10 @@
-import { GetSimpleProductQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetSimpleProductQueryVariables } from '@schema';
 
-const GetSimpleProduct = (props: { GetSimpleProductQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetSimpleProduct = (clientProps: ClientProps) => (resolverProps: GetSimpleProductQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetSimpleProduct;

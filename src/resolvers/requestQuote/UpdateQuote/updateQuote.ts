@@ -1,9 +1,10 @@
-import { UpdateQuoteMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { UpdateQuoteMutationVariables } from '@schema';
 
-const UpdateQuote = (props: { UpdateQuoteMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const UpdateQuote = (clientProps: ClientProps) => (resolverProps: UpdateQuoteMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default UpdateQuote;

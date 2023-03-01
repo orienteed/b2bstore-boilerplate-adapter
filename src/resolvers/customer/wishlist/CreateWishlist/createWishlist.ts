@@ -1,9 +1,10 @@
-import { CreateWishlistMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { CreateWishlistMutationVariables } from '@schema';
 
-const CreateWishlist = (props: { CreateWishlistMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const CreateWishlist = (clientProps: ClientProps) => (resolverProps: CreateWishlistMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default CreateWishlist;

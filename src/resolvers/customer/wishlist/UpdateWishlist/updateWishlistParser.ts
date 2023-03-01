@@ -1,6 +1,6 @@
-import { UpdateWishlistMutation } from "src/schema";
+import { UpdateWishlistMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): UpdateWishlistMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

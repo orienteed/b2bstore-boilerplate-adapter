@@ -1,9 +1,10 @@
-import { GetQuoteByIdQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetQuoteByIdQueryVariables } from '@schema';
 
-const GetQuoteById = (props: { GetQuoteByIdQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetQuoteById = (clientProps: ClientProps) => (resolverProps: GetQuoteByIdQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetQuoteById;

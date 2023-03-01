@@ -1,9 +1,10 @@
-import { GetCmsPageQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetCmsPageQueryVariables } from '@schema';
 
-const GetCmsPage = (props: { GetCmsPageQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetCmsPage = (clientProps: ClientProps) => (resolverProps: GetCmsPageQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetCmsPage;

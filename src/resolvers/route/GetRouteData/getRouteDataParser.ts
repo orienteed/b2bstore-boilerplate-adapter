@@ -1,6 +1,6 @@
-import { GetRouteDataQuery } from "src/schema";
+import { GetRouteDataQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetRouteDataQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

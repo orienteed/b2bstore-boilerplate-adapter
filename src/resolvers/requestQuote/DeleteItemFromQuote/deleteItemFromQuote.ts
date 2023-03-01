@@ -1,11 +1,10 @@
-import { DeleteItemFromQuoteMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { DeleteItemFromQuoteMutationVariables } from '@schema';
 
-const DeleteItemFromQuote = (props: {
-  DeleteItemFromQuoteMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const DeleteItemFromQuote = (clientProps: ClientProps) => (resolverProps: DeleteItemFromQuoteMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default DeleteItemFromQuote;

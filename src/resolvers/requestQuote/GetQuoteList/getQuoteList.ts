@@ -1,9 +1,10 @@
-import { GetQuoteListQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetQuoteListQueryVariables } from '@schema';
 
-const GetQuoteList = (props: { GetQuoteListQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetQuoteList = (clientProps: ClientProps) => (resolverProps: GetQuoteListQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetQuoteList;

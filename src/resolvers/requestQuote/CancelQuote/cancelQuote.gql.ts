@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const CANCEL_QUOTE = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  cancelQuoteMutation: CANCEL_QUOTE,
+    cancelQuoteMutation: CANCEL_QUOTE
 };

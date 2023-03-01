@@ -1,6 +1,6 @@
-import { GetMegaMenuQuery } from "src/schema";
+import { GetMegaMenuQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetMegaMenuQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

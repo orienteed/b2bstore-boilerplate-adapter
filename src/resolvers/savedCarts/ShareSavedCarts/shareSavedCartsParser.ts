@@ -1,6 +1,6 @@
-import { ShareSavedCartsMutation } from "src/schema";
+import { ShareSavedCartsMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): ShareSavedCartsMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

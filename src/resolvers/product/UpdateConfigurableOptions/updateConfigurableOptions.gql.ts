@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const UPDATE_CONFIGURABLE_OPTIONS = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  updateConfigurableOptionsMutation: UPDATE_CONFIGURABLE_OPTIONS,
+    updateConfigurableOptionsMutation: UPDATE_CONFIGURABLE_OPTIONS
 };

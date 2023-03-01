@@ -1,11 +1,10 @@
-import { RequestPasswordResetEmailMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { RequestPasswordResetEmailMutationVariables } from '@schema';
 
-const RequestPasswordResetEmail = (props: {
-  RequestPasswordResetEmailMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const RequestPasswordResetEmail = (clientProps: ClientProps) => (resolverProps: RequestPasswordResetEmailMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default RequestPasswordResetEmail;

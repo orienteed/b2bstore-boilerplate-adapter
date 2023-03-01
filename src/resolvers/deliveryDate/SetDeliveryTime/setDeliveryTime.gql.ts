@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const SET_DELIVERY_TIME = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  setDeliveryTimeMutation: SET_DELIVERY_TIME,
+    setDeliveryTimeMutation: SET_DELIVERY_TIME
 };

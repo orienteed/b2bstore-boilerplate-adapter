@@ -1,11 +1,10 @@
-import { RemoveCouponFromCartMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { RemoveCouponFromCartMutationVariables } from '@schema';
 
-const RemoveCouponFromCart = (props: {
-  RemoveCouponFromCartMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const RemoveCouponFromCart = (clientProps: ClientProps) => (resolverProps: RemoveCouponFromCartMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default RemoveCouponFromCart;

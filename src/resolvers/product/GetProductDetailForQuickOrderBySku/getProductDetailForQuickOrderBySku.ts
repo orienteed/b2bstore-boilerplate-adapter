@@ -1,11 +1,11 @@
-import { GetProductDetailForQuickOrderBySkuQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetProductDetailForQuickOrderBySkuQueryVariables } from '@schema';
 
-const GetProductDetailForQuickOrderBySku = (props: {
-  GetProductDetailForQuickOrderBySkuQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetProductDetailForQuickOrderBySku =
+    (clientProps: ClientProps) => (resolverProps: GetProductDetailForQuickOrderBySkuQueryVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default GetProductDetailForQuickOrderBySku;

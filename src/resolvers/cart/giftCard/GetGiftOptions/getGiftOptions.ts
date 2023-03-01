@@ -1,9 +1,10 @@
-import { GetGiftOptionsQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetGiftOptionsQueryVariables } from '@schema';
 
-const GetGiftOptions = (props: { GetGiftOptionsQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetGiftOptions = (clientProps: ClientProps) => (resolverProps: GetGiftOptionsQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetGiftOptions;

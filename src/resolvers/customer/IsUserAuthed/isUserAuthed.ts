@@ -1,9 +1,10 @@
-import { IsUserAuthedQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { IsUserAuthedQueryVariables } from '@schema';
 
-const IsUserAuthed = (props: { IsUserAuthedQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const IsUserAuthed = (clientProps: ClientProps) => (resolverProps: IsUserAuthedQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default IsUserAuthed;

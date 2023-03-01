@@ -1,11 +1,10 @@
-import { DeleteSubmittedQuoteMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { DeleteSubmittedQuoteMutationVariables } from '@schema';
 
-const DeleteSubmittedQuote = (props: {
-  DeleteSubmittedQuoteMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const DeleteSubmittedQuote = (clientProps: ClientProps) => (resolverProps: DeleteSubmittedQuoteMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default DeleteSubmittedQuote;

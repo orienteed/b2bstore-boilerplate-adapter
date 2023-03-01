@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const ADD_PRODUCT_TO_CART = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  addProductToCartMutation: ADD_PRODUCT_TO_CART,
+    addProductToCartMutation: ADD_PRODUCT_TO_CART
 };

@@ -1,6 +1,6 @@
-import { SignOutMutation } from "src/schema";
+import { SignOutMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): SignOutMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

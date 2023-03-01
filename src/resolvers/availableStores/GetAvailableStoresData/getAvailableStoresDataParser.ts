@@ -1,6 +1,6 @@
-import { GetAvailableStoresDataQuery } from "src/schema";
+import { GetAvailableStoresDataQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetAvailableStoresDataQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

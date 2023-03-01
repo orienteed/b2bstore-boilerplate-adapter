@@ -1,6 +1,6 @@
-import { GetCmsDynamicBlocksQuery } from "src/schema";
+import { GetCmsDynamicBlocksQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetCmsDynamicBlocksQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

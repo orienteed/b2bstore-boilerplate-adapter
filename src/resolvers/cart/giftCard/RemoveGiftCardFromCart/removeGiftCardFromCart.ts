@@ -1,11 +1,10 @@
-import { RemoveGiftCardFromCartMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { RemoveGiftCardFromCartMutationVariables } from '@schema';
 
-const RemoveGiftCardFromCart = (props: {
-  RemoveGiftCardFromCartMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const RemoveGiftCardFromCart = (clientProps: ClientProps) => (resolverProps: RemoveGiftCardFromCartMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default RemoveGiftCardFromCart;

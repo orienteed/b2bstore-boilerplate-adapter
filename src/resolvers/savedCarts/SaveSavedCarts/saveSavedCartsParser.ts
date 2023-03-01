@@ -1,6 +1,6 @@
-import { SaveSavedCartsMutation } from "src/schema";
+import { SaveSavedCartsMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): SaveSavedCartsMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

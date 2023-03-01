@@ -1,6 +1,6 @@
-import { SetDeliveryTimeMutation } from "src/schema";
+import { SetDeliveryTimeMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): SetDeliveryTimeMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

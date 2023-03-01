@@ -1,6 +1,6 @@
-import { GetDefaultShippingQuery } from "src/schema";
+import { GetDefaultShippingQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetDefaultShippingQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

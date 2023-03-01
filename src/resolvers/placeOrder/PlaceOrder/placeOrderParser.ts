@@ -1,6 +1,6 @@
-import { PlaceOrderMutation } from "src/schema";
+import { PlaceOrderMutation } from '@schema';
 
 export const addItemToCartParser = (data: any): PlaceOrderMutation => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

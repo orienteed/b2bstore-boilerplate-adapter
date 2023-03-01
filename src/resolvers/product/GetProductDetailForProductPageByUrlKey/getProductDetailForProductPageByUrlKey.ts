@@ -1,11 +1,11 @@
-import { GetProductDetailForProductPageByUrlKeyQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetProductDetailForProductPageByUrlKeyQueryVariables } from '@schema';
 
-const GetProductDetailForProductPageByUrlKey = (props: {
-  GetProductDetailForProductPageByUrlKeyQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetProductDetailForProductPageByUrlKey =
+    (clientProps: ClientProps) => (resolverProps: GetProductDetailForProductPageByUrlKeyQueryVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default GetProductDetailForProductPageByUrlKey;

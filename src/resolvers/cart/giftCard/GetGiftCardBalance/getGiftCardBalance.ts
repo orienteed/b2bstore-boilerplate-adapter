@@ -1,9 +1,10 @@
-import { GetGiftCardBalanceQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetGiftCardBalanceQueryVariables } from '@schema';
 
-const GetGiftCardBalance = (props: { GetGiftCardBalanceQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetGiftCardBalance = (clientProps: ClientProps) => (resolverProps: GetGiftCardBalanceQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetGiftCardBalance;

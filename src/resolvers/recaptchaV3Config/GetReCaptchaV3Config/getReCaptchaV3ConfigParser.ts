@@ -1,6 +1,6 @@
-import { GetReCaptchaV3ConfigQuery } from "src/schema";
+import { GetReCaptchaV3ConfigQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetReCaptchaV3ConfigQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

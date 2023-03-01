@@ -1,8 +1,6 @@
-import { GetProductItemsFilteredByCategoryQuery } from "src/schema";
+import { GetProductItemsFilteredByCategoryQuery } from '@schema';
 
-export const addItemToCartParser = (
-  data: any
-): GetProductItemsFilteredByCategoryQuery => {
-  // Your parser logic here
-  return data;
+export const addItemToCartParser = (data: any): GetProductItemsFilteredByCategoryQuery => {
+    // Your parser logic here
+    return data;
 };

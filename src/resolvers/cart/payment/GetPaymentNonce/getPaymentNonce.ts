@@ -1,9 +1,10 @@
-import { GetPaymentNonceQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetPaymentNonceQueryVariables } from '@schema';
 
-const GetPaymentNonce = (props: { GetPaymentNonceQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetPaymentNonce = (clientProps: ClientProps) => (resolverProps: GetPaymentNonceQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetPaymentNonce;

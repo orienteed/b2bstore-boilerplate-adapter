@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const DELETE_PRODUCTS_FROM_COMPARE_LIST = gql`
-  # Your query here
+    # Your query here
 `;
 
 export default {
-  deleteProductsFromCompareListMutation: DELETE_PRODUCTS_FROM_COMPARE_LIST,
+    deleteProductsFromCompareListMutation: DELETE_PRODUCTS_FROM_COMPARE_LIST
 };

@@ -1,11 +1,10 @@
-import { GetProductsDetailsBySearchQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetProductsDetailsBySearchQueryVariables } from '@schema';
 
-const GetProductsDetailsBySearch = (props: {
-  GetProductsDetailsBySearchQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetProductsDetailsBySearch = (clientProps: ClientProps) => (resolverProps: GetProductsDetailsBySearchQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetProductsDetailsBySearch;

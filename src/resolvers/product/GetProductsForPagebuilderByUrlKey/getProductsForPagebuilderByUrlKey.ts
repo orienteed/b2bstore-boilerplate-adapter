@@ -1,11 +1,11 @@
-import { GetProductsForPagebuilderByUrlKeyQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetProductsForPagebuilderByUrlKeyQueryVariables } from '@schema';
 
-const GetProductsForPagebuilderByUrlKey = (props: {
-  GetProductsForPagebuilderByUrlKeyQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetProductsForPagebuilderByUrlKey =
+    (clientProps: ClientProps) => (resolverProps: GetProductsForPagebuilderByUrlKeyQueryVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default GetProductsForPagebuilderByUrlKey;

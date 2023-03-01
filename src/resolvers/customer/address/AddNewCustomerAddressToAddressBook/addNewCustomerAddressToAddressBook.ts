@@ -1,11 +1,11 @@
-import { AddNewCustomerAddressToAddressBookMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { AddNewCustomerAddressToAddressBookMutationVariables } from '@schema';
 
-const AddNewCustomerAddressToAddressBook = (props: {
-  AddNewCustomerAddressToAddressBookMutationVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const AddNewCustomerAddressToAddressBook =
+    (clientProps: ClientProps) => (resolverProps: AddNewCustomerAddressToAddressBookMutationVariables) => {
+        // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
-};
+        return { data: {}, loading: false, error: undefined };
+    };
 
 export default AddNewCustomerAddressToAddressBook;

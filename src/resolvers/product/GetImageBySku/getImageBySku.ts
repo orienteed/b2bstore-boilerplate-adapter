@@ -1,9 +1,10 @@
-import { GetImageBySkuQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetImageBySkuQueryVariables } from '@schema';
 
-const GetImageBySku = (props: { GetImageBySkuQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetImageBySku = (clientProps: ClientProps) => (resolverProps: GetImageBySkuQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetImageBySku;

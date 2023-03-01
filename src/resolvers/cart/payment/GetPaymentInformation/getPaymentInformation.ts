@@ -1,11 +1,10 @@
-import { GetPaymentInformationQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetPaymentInformationQueryVariables } from '@schema';
 
-const GetPaymentInformation = (props: {
-  GetPaymentInformationQueryVariables;
-}) => {
-  // Look docs for more info about how to fill this function
+const GetPaymentInformation = (clientProps: ClientProps) => (resolverProps: GetPaymentInformationQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetPaymentInformation;

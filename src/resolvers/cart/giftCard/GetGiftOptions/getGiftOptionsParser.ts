@@ -1,6 +1,6 @@
-import { GetGiftOptionsQuery } from "src/schema";
+import { GetGiftOptionsQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetGiftOptionsQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };

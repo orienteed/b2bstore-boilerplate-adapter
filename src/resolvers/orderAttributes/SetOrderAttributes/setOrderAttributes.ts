@@ -1,9 +1,10 @@
-import { SetOrderAttributesMutationVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { SetOrderAttributesMutationVariables } from '@schema';
 
-const SetOrderAttributes = (props: { SetOrderAttributesMutationVariables }) => {
-  // Look docs for more info about how to fill this function
+const SetOrderAttributes = (clientProps: ClientProps) => (resolverProps: SetOrderAttributesMutationVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default SetOrderAttributes;

@@ -1,9 +1,10 @@
-import { GetBreadcrumbsQueryVariables } from "src/schema";
+import { ClientProps } from 'src';
+import { GetBreadcrumbsQueryVariables } from '@schema';
 
-const GetBreadcrumbs = (props: { GetBreadcrumbsQueryVariables }) => {
-  // Look docs for more info about how to fill this function
+const GetBreadcrumbs = (clientProps: ClientProps) => (resolverProps: GetBreadcrumbsQueryVariables) => {
+    // Look docs for more info about how to fill this function
 
-  return { data: {}, loading: false, error: undefined };
+    return { data: {}, loading: false, error: undefined };
 };
 
 export default GetBreadcrumbs;

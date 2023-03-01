@@ -1,6 +1,6 @@
-import { GetImageBySkuQuery } from "src/schema";
+import { GetImageBySkuQuery } from '@schema';
 
 export const addItemToCartParser = (data: any): GetImageBySkuQuery => {
-  // Your parser logic here
-  return data;
+    // Your parser logic here
+    return data;
 };
