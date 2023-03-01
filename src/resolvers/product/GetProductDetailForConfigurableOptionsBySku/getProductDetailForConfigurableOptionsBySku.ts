@@ -1,10 +1,11 @@
-import { GetProductDetailForConfigurableOptionsBySkuQueryVariables } from "@schema";
+import { GetProductDetailForConfigurableOptionsBySkuQueryVariables } from "src/schema";
 
-const GetProductDetailForConfigurableOptionsBySku = (props: { GetProductDetailForConfigurableOptionsBySkuQueryVariables }) => {
-    // Look docs for more info about how to fill this function
+const GetProductDetailForConfigurableOptionsBySku = (props: {
+  GetProductDetailForConfigurableOptionsBySkuQueryVariables;
+}) => {
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default GetProductDetailForConfigurableOptionsBySku;
-        

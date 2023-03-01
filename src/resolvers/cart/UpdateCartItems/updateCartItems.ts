@@ -1,10 +1,9 @@
-import { UpdateCartItemsMutationVariables } from "@schema";
+import { UpdateCartItemsMutationVariables } from "src/schema";
 
 const UpdateCartItems = (props: { UpdateCartItemsMutationVariables }) => {
-    // Look docs for more info about how to fill this function
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default UpdateCartItems;
-        

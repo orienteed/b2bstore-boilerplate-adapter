@@ -1,10 +1,11 @@
-import { AddConfigurableProductsToQuoteMutationVariables } from "@schema";
+import { AddConfigurableProductsToQuoteMutationVariables } from "src/schema";
 
-const AddConfigurableProductsToQuote = (props: { AddConfigurableProductsToQuoteMutationVariables }) => {
-    // Look docs for more info about how to fill this function
+const AddConfigurableProductsToQuote = (props: {
+  AddConfigurableProductsToQuoteMutationVariables;
+}) => {
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default AddConfigurableProductsToQuote;
-        

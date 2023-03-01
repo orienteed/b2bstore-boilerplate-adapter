@@ -1,7 +1,6 @@
-import { GetCmsBlocksQuery } from '@schema';
+import { GetCmsBlocksQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): GetCmsBlocksQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

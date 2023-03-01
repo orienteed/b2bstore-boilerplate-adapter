@@ -1,10 +1,9 @@
-import { GetGiftCardBalanceQueryVariables } from "@schema";
+import { GetGiftCardBalanceQueryVariables } from "src/schema";
 
 const GetGiftCardBalance = (props: { GetGiftCardBalanceQueryVariables }) => {
-    // Look docs for more info about how to fill this function
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default GetGiftCardBalance;
-        

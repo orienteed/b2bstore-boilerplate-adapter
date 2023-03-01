@@ -1,7 +1,6 @@
-import { DuplicateQuoteMutation } from '@schema';
+import { DuplicateQuoteMutation } from "src/schema";
 
 export const addItemToCartParser = (data: any): DuplicateQuoteMutation => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

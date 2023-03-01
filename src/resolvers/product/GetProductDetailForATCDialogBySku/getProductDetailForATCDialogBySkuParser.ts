@@ -1,7 +1,8 @@
-import { GetProductDetailForAtcDialogBySkuQuery } from '@schema';
+import { GetProductDetailForAtcDialogBySkuQuery } from "src/schema";
 
-export const addItemToCartParser = (data: any): GetProductDetailForAtcDialogBySkuQuery => {
-    // Your parser logic here
-    return data;
+export const addItemToCartParser = (
+  data: any
+): GetProductDetailForAtcDialogBySkuQuery => {
+  // Your parser logic here
+  return data;
 };
-        

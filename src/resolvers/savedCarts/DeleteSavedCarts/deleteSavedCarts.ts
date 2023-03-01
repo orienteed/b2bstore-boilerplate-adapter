@@ -1,10 +1,9 @@
-import { DeleteSavedCartsMutationVariables } from "@schema";
+import { DeleteSavedCartsMutationVariables } from "src/schema";
 
 const DeleteSavedCarts = (props: { DeleteSavedCartsMutationVariables }) => {
-    // Look docs for more info about how to fill this function
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default DeleteSavedCarts;
-        

@@ -1,7 +1,8 @@
-import { UpdateCustomerAddressInAddressBookMutation } from '@schema';
+import { UpdateCustomerAddressInAddressBookMutation } from "src/schema";
 
-export const addItemToCartParser = (data: any): UpdateCustomerAddressInAddressBookMutation => {
-    // Your parser logic here
-    return data;
+export const addItemToCartParser = (
+  data: any
+): UpdateCustomerAddressInAddressBookMutation => {
+  // Your parser logic here
+  return data;
 };
-        

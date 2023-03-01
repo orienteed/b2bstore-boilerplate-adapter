@@ -1,7 +1,6 @@
-import { UpdateQuoteMutation } from '@schema';
+import { UpdateQuoteMutation } from "src/schema";
 
 export const addItemToCartParser = (data: any): UpdateQuoteMutation => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

@@ -1,7 +1,6 @@
-import { GetRegionsQuery } from '@schema';
+import { GetRegionsQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): GetRegionsQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

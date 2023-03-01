@@ -1,10 +1,11 @@
-import { GetAvailableSortMethodsByCategoryQueryVariables } from "@schema";
+import { GetAvailableSortMethodsByCategoryQueryVariables } from "src/schema";
 
-const GetAvailableSortMethodsByCategory = (props: { GetAvailableSortMethodsByCategoryQueryVariables }) => {
-    // Look docs for more info about how to fill this function
+const GetAvailableSortMethodsByCategory = (props: {
+  GetAvailableSortMethodsByCategoryQueryVariables;
+}) => {
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default GetAvailableSortMethodsByCategory;
-        

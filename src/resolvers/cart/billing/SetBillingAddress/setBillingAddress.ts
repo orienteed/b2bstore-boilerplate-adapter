@@ -1,10 +1,9 @@
-import { SetBillingAddressMutationVariables } from "@schema";
+import { SetBillingAddressMutationVariables } from "src/schema";
 
 const SetBillingAddress = (props: { SetBillingAddressMutationVariables }) => {
-    // Look docs for more info about how to fill this function
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default SetBillingAddress;
-        

@@ -1,7 +1,6 @@
-import { GetCartDetailsQuery } from '@schema';
+import { GetCartDetailsQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): GetCartDetailsQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

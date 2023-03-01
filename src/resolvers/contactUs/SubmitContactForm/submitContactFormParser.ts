@@ -1,7 +1,6 @@
-import { SubmitContactFormMutation } from '@schema';
+import { SubmitContactFormMutation } from "src/schema";
 
 export const addItemToCartParser = (data: any): SubmitContactFormMutation => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

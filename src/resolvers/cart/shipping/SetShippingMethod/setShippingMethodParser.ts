@@ -1,7 +1,6 @@
-import { SetShippingMethodMutation } from '@schema';
+import { SetShippingMethodMutation } from "src/schema";
 
 export const addItemToCartParser = (data: any): SetShippingMethodMutation => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

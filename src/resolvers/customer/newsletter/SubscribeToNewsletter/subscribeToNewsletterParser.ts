@@ -1,7 +1,8 @@
-import { SubscribeToNewsletterMutation } from '@schema';
+import { SubscribeToNewsletterMutation } from "src/schema";
 
-export const addItemToCartParser = (data: any): SubscribeToNewsletterMutation => {
-    // Your parser logic here
-    return data;
+export const addItemToCartParser = (
+  data: any
+): SubscribeToNewsletterMutation => {
+  // Your parser logic here
+  return data;
 };
-        

@@ -7,12 +7,22 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
   "rules": {
-    "max-len": ["error", 140],
-    "quotes": [2, "single", { "avoidEscape": true }]
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "no-unused-vars": "off"
   },
   "env": {
     "browser": true,
     "es6": true,
     "node": true
-  }
+  },
+  "ignorePatterns": "**/*.d.ts"
 }

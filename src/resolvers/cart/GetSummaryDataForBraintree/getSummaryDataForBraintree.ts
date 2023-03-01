@@ -1,10 +1,11 @@
-import { GetSummaryDataForBraintreeQueryVariables } from "@schema";
+import { GetSummaryDataForBraintreeQueryVariables } from "src/schema";
 
-const GetSummaryDataForBraintree = (props: { GetSummaryDataForBraintreeQueryVariables }) => {
-    // Look docs for more info about how to fill this function
+const GetSummaryDataForBraintree = (props: {
+  GetSummaryDataForBraintreeQueryVariables;
+}) => {
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default GetSummaryDataForBraintree;
-        

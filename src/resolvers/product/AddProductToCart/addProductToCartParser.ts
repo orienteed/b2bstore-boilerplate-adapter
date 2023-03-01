@@ -1,7 +1,6 @@
-import { AddProductToCartMutation } from '@schema';
+import { AddProductToCartMutation } from "src/schema";
 
 export const addItemToCartParser = (data: any): AddProductToCartMutation => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

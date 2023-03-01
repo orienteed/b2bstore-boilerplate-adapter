@@ -14,15 +14,9 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@schema": [
-        "src/schema/index.ts"
-      ]
+      "@schema": ["src/schema/index.d.ts"]
     }
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

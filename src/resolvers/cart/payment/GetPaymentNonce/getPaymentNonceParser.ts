@@ -1,7 +1,6 @@
-import { GetPaymentNonceQuery } from '@schema';
+import { GetPaymentNonceQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): GetPaymentNonceQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

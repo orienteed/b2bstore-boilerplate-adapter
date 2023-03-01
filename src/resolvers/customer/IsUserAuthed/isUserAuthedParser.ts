@@ -1,7 +1,6 @@
-import { IsUserAuthedQuery } from '@schema';
+import { IsUserAuthedQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): IsUserAuthedQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

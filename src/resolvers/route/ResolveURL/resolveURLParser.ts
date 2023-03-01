@@ -1,7 +1,6 @@
-import { ResolveUrlQuery } from '@schema';
+import { ResolveUrlQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): ResolveUrlQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

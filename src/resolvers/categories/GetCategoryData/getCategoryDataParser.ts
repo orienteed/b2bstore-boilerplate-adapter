@@ -1,7 +1,6 @@
-import { GetCategoryDataQuery } from '@schema';
+import { GetCategoryDataQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): GetCategoryDataQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        

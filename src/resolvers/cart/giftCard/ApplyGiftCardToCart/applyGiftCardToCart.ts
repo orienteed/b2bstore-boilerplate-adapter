@@ -1,10 +1,11 @@
-import { ApplyGiftCardToCartMutationVariables } from "@schema";
+import { ApplyGiftCardToCartMutationVariables } from "src/schema";
 
-const ApplyGiftCardToCart = (props: { ApplyGiftCardToCartMutationVariables }) => {
-    // Look docs for more info about how to fill this function
+const ApplyGiftCardToCart = (props: {
+  ApplyGiftCardToCartMutationVariables;
+}) => {
+  // Look docs for more info about how to fill this function
 
-    return { data: {}, loading: false, error: undefined };
+  return { data: {}, loading: false, error: undefined };
 };
 
 export default ApplyGiftCardToCart;
-        

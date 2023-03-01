@@ -1,7 +1,6 @@
-import { GetStoreConfigQuery } from '@schema';
+import { GetStoreConfigQuery } from "src/schema";
 
 export const addItemToCartParser = (data: any): GetStoreConfigQuery => {
-    // Your parser logic here
-    return data;
+  // Your parser logic here
+  return data;
 };
-        
