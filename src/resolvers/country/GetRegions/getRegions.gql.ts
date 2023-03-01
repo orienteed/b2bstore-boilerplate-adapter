@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_REGIONS = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getRegionsQuery: GET_REGIONS
+  getRegionsQuery: GET_REGIONS,
 };
-        

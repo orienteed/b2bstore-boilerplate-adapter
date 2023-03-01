@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_CART_DETAILS = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getCartDetailsQuery: GET_CART_DETAILS
+  getCartDetailsQuery: GET_CART_DETAILS,
 };
-        

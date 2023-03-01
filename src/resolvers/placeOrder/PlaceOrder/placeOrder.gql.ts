@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const PLACE_ORDER = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    placeOrderMutation: PLACE_ORDER
+  placeOrderMutation: PLACE_ORDER,
 };
-        

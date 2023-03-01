@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const CREATE_COMPARE_LIST = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    createCompareListMutation: CREATE_COMPARE_LIST
+  createCompareListMutation: CREATE_COMPARE_LIST,
 };
-        

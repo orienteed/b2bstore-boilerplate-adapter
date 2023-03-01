@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const SUBMIT_CURRENT_QUOTE = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    submitCurrentQuoteMutation: SUBMIT_CURRENT_QUOTE
+  submitCurrentQuoteMutation: SUBMIT_CURRENT_QUOTE,
 };
-        

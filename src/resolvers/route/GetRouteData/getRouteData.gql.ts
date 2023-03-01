@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_ROUTE_DATA = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getRouteDataQuery: GET_ROUTE_DATA
+  getRouteDataQuery: GET_ROUTE_DATA,
 };
-        

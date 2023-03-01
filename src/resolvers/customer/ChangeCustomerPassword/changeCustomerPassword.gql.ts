@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const CHANGE_CUSTOMER_PASSWORD = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    changeCustomerPasswordMutation: CHANGE_CUSTOMER_PASSWORD
+  changeCustomerPasswordMutation: CHANGE_CUSTOMER_PASSWORD,
 };
-        

@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_CMS_BLOCKS = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getCmsBlocksQuery: GET_CMS_BLOCKS
+  getCmsBlocksQuery: GET_CMS_BLOCKS,
 };
-        

@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const DUPLICATE_QUOTE = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    duplicateQuoteMutation: DUPLICATE_QUOTE
+  duplicateQuoteMutation: DUPLICATE_QUOTE,
 };
-        

@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_CUSTOMER_CART_ADDRESSES = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getCustomerCartAddressesForAddressBookQuery: GET_CUSTOMER_CART_ADDRESSES
+  getCustomerCartAddressesForAddressBookQuery: GET_CUSTOMER_CART_ADDRESSES,
 };
-        

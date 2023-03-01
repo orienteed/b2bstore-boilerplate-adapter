@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const SUBMIT_CONTACT_FORM = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    submitContactFormMutation: SUBMIT_CONTACT_FORM
+  submitContactFormMutation: SUBMIT_CONTACT_FORM,
 };
-        

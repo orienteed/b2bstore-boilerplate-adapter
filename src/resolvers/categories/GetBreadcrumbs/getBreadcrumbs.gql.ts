@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_BREADCRUMBS = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getBreadcrumbsQuery: GET_BREADCRUMBS
+  getBreadcrumbsQuery: GET_BREADCRUMBS,
 };
-        

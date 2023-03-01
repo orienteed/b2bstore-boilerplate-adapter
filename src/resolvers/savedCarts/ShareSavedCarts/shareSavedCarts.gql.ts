@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const SHARE_CART = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    shareSavedCartsMutation: SHARE_CART
+  shareSavedCartsMutation: SHARE_CART,
 };
-        

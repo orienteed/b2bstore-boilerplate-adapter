@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_PAYMENT_NONCE = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getPaymentNonceQuery: GET_PAYMENT_NONCE
+  getPaymentNonceQuery: GET_PAYMENT_NONCE,
 };
-        

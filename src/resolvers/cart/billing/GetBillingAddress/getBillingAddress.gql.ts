@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_BILLING_ADDRESS = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getBillingAddressQuery: GET_BILLING_ADDRESS
+  getBillingAddressQuery: GET_BILLING_ADDRESS,
 };
-        

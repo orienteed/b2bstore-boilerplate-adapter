@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_WISHLIST_PRODUCTS = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getWishlistProductsQuery: GET_WISHLIST_PRODUCTS
+  getWishlistProductsQuery: GET_WISHLIST_PRODUCTS,
 };
-        

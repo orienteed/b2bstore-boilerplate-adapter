@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_IMAGE_BY_SKU = gql`
-    # Your query here
+  # Your query here
 `;
 
 export default {
-    getImageBySkuQuery: GET_IMAGE_BY_SKU
+  getImageBySkuQuery: GET_IMAGE_BY_SKU,
 };
-        
