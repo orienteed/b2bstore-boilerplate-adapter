@@ -6,7 +6,6 @@ export { default as addProductToWishlist } from './customer/wishlist/AddProductT
 export { default as addQuoteToCart } from './requestQuote/AddQuoteToCart/addQuoteToCart';
 export { default as addSimpleProductToCart } from './product/AddSimpleProductToCart/addSimpleProductToCart';
 export { default as addSimpleProductsToQuote } from './requestQuote/AddSimpleProductsToQuote/addSimpleProductsToQuote';
-export { default as addWishlistProductToCart } from './customer/wishlist/AddWishlistProductToCart/addWishlistProductToCart';
 export { default as applyCouponToCart } from './cart/coupon/ApplyCouponToCart/applyCouponToCart';
 export { default as applyGiftCardToCart } from './cart/giftCard/ApplyGiftCardToCart/applyGiftCardToCart';
 export { default as cancelQuote } from './requestQuote/CancelQuote/cancelQuote';
@@ -94,7 +93,6 @@ export { default as getShippingMethods } from './cart/shipping/GetShippingMethod
 export { default as getSimpleProduct } from './product/GetSimpleProduct/getSimpleProduct';
 export { default as getStoreConfig } from './storeConfig/GetStoreConfig/getStoreConfig';
 export { default as getSummaryData } from './cart/GetSummaryData/getSummaryData';
-export { default as getSummaryDataForBraintree } from './cart/GetSummaryDataForBraintree/getSummaryDataForBraintree';
 export { default as getWebkulPaymentCreditSystemConfig } from './webkulPaymentCreditSystemConfig/GetWebkulPaymentCreditSystemConfig/getWebkulPaymentCreditSystemConfig';
 export { default as getWishlistProducts } from './customer/wishlist/GetWishlistProducts/getWishlistProducts';
 export { default as getWishlistProductsForLocalField } from './customer/wishlist/GetWishlistProductsForLocalField/getWishlistProductsForLocalField';
