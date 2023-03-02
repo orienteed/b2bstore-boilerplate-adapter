@@ -137,8 +137,13 @@ import {
 } from './resolvers';
 
 export interface ClientProps {
-    apolloClient: any;
+    mergeOperations: any;
     restClient: any;
+    useAwaitQuery: any;
+    useLazyQuery: any;
+    useMutation: any;
+    useQuery: any;
+    useSubscription: any;
 }
 
 export const getResolvers = (clientProps: ClientProps) => {
