@@ -1,6 +1,6 @@
-import { SubscribeToNewsletterMutation } from '@schema';
+import { GetCustomerSubscriptionQuery } from '@schema';
 
-export const subscribeToNewsletterParser = (data: any): SubscribeToNewsletterMutation => {
+export const subscribeToNewsletterParser = (data: any): GetCustomerSubscriptionQuery => {
     // Your parser logic here
     return data;
 };

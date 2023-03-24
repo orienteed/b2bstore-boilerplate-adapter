@@ -1,7 +1,6 @@
 import { ClientProps } from 'src';
-import { SubscribeToNewsletterMutationVariables } from '@schema';
 
-const SubscribeToNewsletter = (clientProps: ClientProps) => (resolverProps: SubscribeToNewsletterMutationVariables) => {
+const SubscribeToNewsletter = (clientProps: ClientProps) => () => {
     // Look docs for more info about how to fill this function
 
     return { data: {}, loading: false, error: undefined };
