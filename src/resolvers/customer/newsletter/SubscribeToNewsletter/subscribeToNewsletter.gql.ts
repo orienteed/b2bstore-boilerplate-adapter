@@ -5,5 +5,5 @@ export const SUBSCRIBE_TO_NEWSLETTER = gql`
 `;
 
 export default {
-    subscribeToNewsletterMutation: SUBSCRIBE_TO_NEWSLETTER
+    getCustomerSubscriptionQuery: SUBSCRIBE_TO_NEWSLETTER
 };
